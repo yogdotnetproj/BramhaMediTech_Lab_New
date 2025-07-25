@@ -1,0 +1,84 @@
+ PatSt_Bal_C PSBCL = new PatSt_Bal_C(Convert.ToString(ViewState["PPID"]), PatRegID, Convert.ToInt32(Session["Branchid"]));
+                  // = PSBCL.PatRegID;
+                    PSBCL.AlterView_PreviousResult(Convert.ToInt32(Session["Branchid"]), PSBCL.PatRegID, Request.QueryString["FID"], MTCodeTemp);
+      
+
+======================================
+
+  public PatSt_Bal_C(string PPID, string PatRegID, int branchid)
+    {
+        SqlConnection conn = DataAccess.ConInitForDC();
+        SqlCommand sc = conn.CreateCommand();
+        sc.CommandText = "select top(1) PatRegID from patmst where  PPID =@PPID and PatRegID < @PatRegID  and branchid=" + branchid + " order by srno desc ";
+
+        sc.Parameters.Add(new SqlParameter("@PatRegID", SqlDbType.NVarChar, 250)).Value = (PatRegID);
+    
+        sc.Parameters.Add(new SqlParameter("@PPID", SqlDbType.NVarChar, 50)).Value = Convert.ToString(PPID);
+      
+        SqlDataReader sdr = null;
+
+        try
+        {
+            conn.Open();
+            sdr = sc.ExecuteReader();
+
+            // This is not a while loop. It only loops once.
+            if (sdr != null && sdr.Read())
+            {
+
+                this.PatRegID = (sdr["PatRegID"].ToString());
+                
+
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+        finally
+        {
+            try
+            {
+                if (sdr != null) sdr.Close();
+                conn.Close(); conn.Dispose();
+            }
+            catch (SqlException)
+            {
+                // Log an event in the Application Event Log.
+                throw;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Record not found");
+            }
+        }
+
+    }
+
+    public void AlterView_PreviousResult(int branchid, string PatRegID, string FID,  string MTCode)
+    {
+        SqlConnection con = DataAccess.ConInitForDC();
+        try
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand(" alter view VW_GetPreviousResult as SELECT     ResMst.STCODE, ResMst.ID, ResMst.MTCode, ResMst.ResultTemplate, ResMst.PatRegID, ResMst.FID, ResMst.ResDate, ResMst.Method, ResMst.TestNo, "+
+                 "   ResMst.testname, ResMst.normalRange, ResMst.unit, ResMst.testorderno, ResMst.PID, ResMst.SDCode, ResMst.UnitCode, ResMst.FinancialYearID, "+
+                 "   ResMst.Maintestname, ResMst.RangeFlag, ResMst.branchId, MainTest.TextDesc, SubDepartment.subdeptid, patmstd.AunticateSignatureId, patmstd.Patauthicante,  "+
+                 "   SubDepartment.subdeptName "+
+                 "   FROM         ResMst INNER JOIN "+
+                 "   MainTest ON ResMst.MTCode = MainTest.MTCode AND ResMst.branchId = MainTest.Branchid INNER JOIN "+
+                 "   SubDepartment ON MainTest.SDCode = SubDepartment.SDCode INNER JOIN "+
+                 "   patmstd ON ResMst.MTCode = patmstd.MTCode AND ResMst.PatRegID = patmstd.PatRegID AND ResMst.FID = patmstd.FID   "+
+                 "    WHERE     (patmstd.TestDeActive = 0) AND ResMst.MTCode in (" + MTCode + ") AND " +
+                 "   ResMst.PatRegID = ('" + PatRegID + "') AND (ResMst.FID = '" + FID + "') AND (ResMst.STCODE <> 'S') AND  " +
+                 "   (ResMst.branchId = " + branchid + ") ", con);
+
+            //con.Open();
+            cmd.ExecuteNonQuery();
+        }
+        catch (Exception exc) { }
+        finally { con.Close(); con.Dispose(); }
+    }

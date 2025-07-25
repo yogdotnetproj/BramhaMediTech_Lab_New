@@ -1,0 +1,21 @@
+-------------------Error Log Start-----------as on 08:40 PM
+WebPage Name :ClickSample.aspx
+Event Name :Insert Records
+User Name :Admin
+Message: System.Data.SqlClient.SqlException (0x80131904): Procedure or function SP_phpatrecfrm has too many arguments specified.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Patmstd_Bal_C.Insert_Update_ForPmst(Int32 branchid) in e:\Lab\09_11\labjed\N_Design\BAN\IN_NewPro_Latest_Project_P_M_Des_New_BAN\App_Code\BAL\Patmstd_Bal_C.cs:line 1271
+   at ClickSample.btnSubmit_Click(Object sender, EventArgs e) in e:\Lab\09_11\labjed\N_Design\BAN\IN_NewPro_Latest_Project_P_M_Des_New_BAN\ClickSample.aspx.cs:line 1131
+ClientConnectionId:e5d3b782-f91f-4268-9a9c-e6bb5f3188b3
+Error Number:8144,State:2,Class:16
+-------------------End----------------------------

@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMaster.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <Maintestname>   </Maintestname>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <link  type="text/css" href="css/custom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="container" style="background:#fff;">
+	<div class="row"> 
+	   			<img src="../images/Header-logo1.png" width="100%">
+
+                
+	</div>
+</div>
+	
+        
+	<header class="top" role="header">
+        <div class="container" style="background:#fff;">
+            <a href="#" class="navbar-brand pull-left" style="font-size:26px;">
+            </a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+          
+         <asp:Menu ID="RealMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+         
+         </asp:Menu>
+       
+            <hr>
+        </div>
+    </header>
+
+
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            
+        
+        </asp:ContentPlaceHolder>
+        <div class="bottom">
+      <hr> 
+	            <h5 style="text-align:center;"> Design &amp; Developed by Core 9 IT Solution PVT.LTd </h5>   
+       </div>
+
+    </div>
+    </form>
+</body>
+</html>

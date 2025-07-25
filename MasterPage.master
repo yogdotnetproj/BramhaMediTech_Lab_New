@@ -1,0 +1,157 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <Maintestname>   </Maintestname>  
+     
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div >
+	
+  
+</div>
+	
+        
+	<header class="top" role="header">
+    <table>
+      <tr>
+                <td colspan="2" width="100%" >
+                    <table width="100%" >
+                       
+                        <tr>
+                            <td style="width: 113px">
+                                <asp:Image ID="Image1" runat="server" Height="55px" ImageUrl="~/Images/hlogo1.PNG"
+                                    Width="113px" BorderStyle="None" />
+                            </td>
+                          
+                           <td 
+                                style="font-size: xx-large; font-weight: bold; font-style: inherit; color: #02618E;
+                                font-variant: normal; text-transform: capitalize; font-family: calibri; text-align: center;">
+                                &nbsp;
+                               <asp:Label ID="lblDemoHospitalName" runat="server" Text=""></asp:Label>
+ <!--<asp:Label ID="Label1" runat="server" Text="Krishna Diagnostic center"></asp:Label>-->
+                            </td>
+                            <td style="width: 113px; text-align: left; vertical-align: top;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:ImageButton ID="ibHome" runat="server" ImageUrl="~/Images/home-32.png"
+                                                PostBackUrl="~/Home.aspx" ToolTip="Home" CausesValidation="False" />
+                                        </td>
+                                        <td>
+                                            <asp:ImageButton ID="ibLogIn" runat="server" ImageUrl="~/Images/login-32.png"
+                                                PostBackUrl="~/Login.aspx" ToolTip="Login" CausesValidation="False" />
+                                           
+                                        </td>
+                                        <td>
+                                            <asp:ImageButton ID="ibLogout" runat="server" ImageUrl="~/Images/logout-32.png"
+                                                OnClick="ibLogout_Click" ToolTip="Logout" CausesValidation="False" />
+                                            
+                                        </td>
+                                        <td>
+                                            <asp:Image ID="Image6" runat="server" ImageUrl="~/Images/profile-32.png" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <table>
+                <tr>
+                <td>
+                     <asp:Label ID="Labelln" runat="server" Text="User name:"></asp:Label>
+                </td>
+                <td>
+                <asp:Label ID="lblusername" runat="server" Text=""></asp:Label>
+                </td>
+                </tr>
+                </table>
+                
+                </td>
+                <td width="100%" >
+                 
+                 <div class="container" style="background:#fff;">          
+           
+          
+         <asp:Menu ID="RealMenu" runat="server" BackColor="White" CssClass="menu"    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+         
+         </asp:Menu>
+       
+          
+        </div>
+                </td>
+                
+                </tr>
+    <tr>
+    <td style="vertical-align:top"  >
+    <table border="1" cellpadding="0" cellspacing="0"   >
+    <tr>
+    <td style="vertical-align:top"  width="100%"  >
+    
+       <asp:Label ID="Label44" runat="server"  Font-Bold="true" ForeColor="Red" Text="Todays Patient Count:"
+            Width="170px"  ></asp:Label>
+          <asp:TreeView ID="TrMenu"  Visible="true" runat="server"   ExpandDepth="1"   
+                onselectednodechanged="TrMenu_SelectedNodeChanged" ForeColor="White" >
+                <HoverNodeStyle Font-Underline="false" />
+                <NodeStyle Font-Names ="Tahoma" Font-Size="10pt"   HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="2px" >
+                </NodeStyle>
+                <ParentNodeStyle Font-Bold="true" />
+                <SelectedNodeStyle     Font-Underline="false" HorizontalPadding="0px" 
+                VerticalPadding="0px" />
+                
+                </asp:TreeView>
+    </td>
+    
+    </tr>
+    
+    </table>
+    
+    </td>
+
+    <td style="vertical-align:top" width="100%"   height="500px";  >
+     <div class="container" style="background:#fff;"  >
+            <a href="#" class="navbar-brand pull-left" style="font-size:26px;">
+            </a>
+            
+          
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >       
+            
+        
+             <p>
+                </p>
+            
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    </td>
+    </tr>
+    
+    </table>
+       
+    </header>
+
+
+    
+        
+        <div class="bottom">
+      <hr> 
+	            <h5 style="text-align:center;"> Design &amp; Developed by Phinex infotech </h5>   
+       </div>
+
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+-------------------Error Log Start-----------as on 09:20 AM
+WebPage Name :ClickSample.aspx
+Event Name :Insert Records
+User Name :Admin
+Message: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Patmstd_Bal_C.Insert_Update_ForPmst(Int32 branchid) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\App_Code\BAL\Patmstd_Bal_C.cs:line 1293
+   at ClickSample.btnSubmit_Click(Object sender, EventArgs e) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\ClickSample.aspx.cs:line 1177
+-------------------End----------------------------
+-------------------Error Log Start-----------as on 09:28 AM
+WebPage Name :ClickSample.aspx
+Event Name :Insert Records
+User Name :Admin
+Message:System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Patmstd_Bal_C.Insert_Update_ForPmst(Int32 branchid) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\App_Code\BAL\Patmstd_Bal_C.cs:line 1293
+   at ClickSample.btnSubmit_Click(Object sender, EventArgs e) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\ClickSample.aspx.cs:line 1177
+-------------------End----------------------------
+-------------------Error Log Start-----------as on 09:36 AM
+WebPage Name :ClickSample.aspx
+Event Name :Insert Records
+User Name :Admin
+Message:System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Patmstd_Bal_C.Insert_Update_ForPmst(Int32 branchid) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\App_Code\BAL\Patmstd_Bal_C.cs:line 1293
+   at ClickSample.btnSubmit_Click(Object sender, EventArgs e) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\ClickSample.aspx.cs:line 1177
+-------------------End----------------------------
+-------------------Error Log Start-----------as on 09:37 AM
+WebPage Name :ClickSample.aspx
+Event Name :Insert Records
+User Name :Admin
+Message:System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Patmstd_Bal_C.Insert_Update_ForPmst(Int32 branchid) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\App_Code\BAL\Patmstd_Bal_C.cs:line 1293
+   at ClickSample.btnSubmit_Click(Object sender, EventArgs e) in e:\Project\SA_US\LAB\Mercy\IN_NewPro_NewDesign19_07_22\ClickSample.aspx.cs:line 1177
+-------------------End----------------------------

@@ -1,0 +1,22 @@
+16/07/2020
+
+select * from CPReceive where id=1496
+select * from CPReceive where id=1558
+select * from CPReceive where id=1559
+select * from CPReceive where id=1560
+select * from CPReceive where id=1561
+
+
+IOM-International Organization For Migration=301,695
+
+
+SELECT        patmst.SrNo, patmst.PID, patmst.FID, patmst.PatRegID, patmst.Patregdate, patmst.intial, patmst.Patname, patmst.sex, patmst.Age, patmst.MDY, patmst.RefDr, patmst.Tests, patmst.PF, patmst.Reportdate, patmst.Phrecdate, 
+                         patmst.flag, patmst.Patphoneno, patmst.Pataddress, patmst.Isemergency, patmst.Branchid, patmst.DoctorCode, patmst.CenterCode, patmst.FinancialYearID, patmst.EmailID, patmst.Drname, patmst.TestCharges, 
+                         patmst.SampleID, patmst.CenterName, patmst.Username, patmst.Usertype, patmst.SampleType, patmst.SampleStatus, patmst.Remark, patmst.PatientcHistory, patmst.RegistratonDateTime, patmst.TelNo, patmst.Email, 
+                         patmst.Patusername, patmst.Patpassword, patmst.PPID, patmst.testname, patmst.Smsevent, patmst.UnitCode, patmst.IsbillBH, patmst.IsActive, patmst.Monthlybill, patmst.cevent, patmst.LabRegMediPro, patmst.IsFreeze, 
+                         patmst.ISCallPatient, patmst.CallRemark, patmst.OtherRefDoctor, patmst.Weights, patmst.Heights, patmst.Disease, patmst.LastPeriod, patmst.Symptoms, patmst.FSTime, patmst.Therapy, patmst.SocialMedia, 
+                         patmst.ClientCharges, patmst.QRImage, patmst.ImagePath, patmst.Image1
+						
+FROM            patmst INNER JOIN
+                         DrMT ON patmst.CenterCode = DrMT.DoctorCode
+WHERE        (patmst.FID = 19) and cashbill=0  and patmst.Monthlybill =1 

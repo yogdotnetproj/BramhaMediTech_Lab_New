@@ -1,0 +1,40 @@
+  
+.center{
+text-align:center;
+}
+
+
+.how {
+
+display: block;
+position: absolute;
+right: 25px;
+top: 15px;
+-webkit-transform: rotate(45deg);
+}
+
+.it {
+display: block;
+position: absolute;
+right: -5px;
+top: 35px;
+-webkit-transform: rotate(0deg);
+}
+
+.works {
+display: block;
+position: absolute;
+right: -65px;
+top: 15px;
+-webkit-transform: rotate(-45deg);
+}
+
+.txt{
+	position:relative;
+	right:60px;
+	top:20px;
+	
+	
+	}
+
+

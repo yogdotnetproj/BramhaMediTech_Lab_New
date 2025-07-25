@@ -1,0 +1,30 @@
+Create table:
+
+ 	Tax_Master
+	BannerTable
+tbl_MaterializeView
+
+add two columns in Patientinformationcode
+ 
+  Testdisc float
+  Testrecamt float
+
+add columns in Test_CashCredit
+
+TaxPer  float 
+HstAmount float
+Billcancelno int
+
+add columns in BillTransactions
+
+TaxPer  float 
+HstAmount float
+
+
+VW_Getcashdetails
+VW_billreceipt
+VW_Getregisteredstatus
+sp_UpdatebillDisactive
+
+Cashbill
+VW_billforhosp

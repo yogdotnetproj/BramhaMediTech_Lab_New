@@ -1,0 +1,46 @@
+inpmst
+dfrmst
+dfrmst_Cyto
+dfrmst_Histo
+
+------------
+DailyPerformTestCharges
+DrCode	nvarchar(50)	Checked
+STCODE	nvarchar(50)	Checked
+
+______________
+dfrmst
+STCODE	nvarchar(50)	Checked
+
+__________---------------------
+dfrmst_Cyto
+
+STCODE	nvarchar(50)	Checked
+
+----------------------------
+dfrmst_histo
+STCODE	nvarchar(50)	Checked
+-----------------------
+inpmst
+MTCode	nvarchar(50)	Checked
+----------------------------
+MTCode	nvarchar(50)	Checked
+-----------------------------
+maintest
+MTCode	nvarchar(50)	Checked
+SDCode	nvarchar(50)	Checked
+__________---------------------
+PackmstD
+PackageCode	nvarchar(50)	Unchecked
+---------------------------------------
+Machinecodemap
+MTCode	nvarchar(50)	Checked
+ParameterCode	nvarchar(50)	Checked
+----------------------------------
+refrangemst
+MTCode	nvarchar(50)	Checkedrefrangemst
+
+---------------------------
+testcharges
+DrCode	nvarchar(50)	Checked
+STCODE	nvarchar(50)	Checked

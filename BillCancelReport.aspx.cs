@@ -1,0 +1,334 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web.Security;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Web.Services;
+using System.Web.Script.Services;
+using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Web.Management;
+using System.Net;
+using System.IO;
+
+
+public partial class BillCancelReport : System.Web.UI.Page
+{
+    TreeviewBind_C ObjTB = new TreeviewBind_C();
+    DataTable dt = new DataTable();
+    dbconnection dc = new dbconnection();
+    string Center = "", Patregid = "", CenterCode = "", labcode_main = "", DocCode = "";
+    DateTime stDate = Date.getMinDate(), endDate = Date.getMinDate();
+    Patmst_New_Bal_C PNB_C = new Patmst_New_Bal_C();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+
+        if (!IsPostBack)
+        {
+            try
+            {
+                if (Convert.ToString(Session["HMS"]) != "Yes")
+                {
+                    if (Convert.ToString(Session["usertype"]) != "Administrator")
+                    {
+                        checkexistpageright("BillCancelReport.aspx");
+                    }
+                }
+              
+
+                ddlfyear.DataSource = FinancialYearTableLogic.getFinancialYearsList_New(Convert.ToInt32(Session["Branchid"]));
+                ddlfyear.DataTextField = "Yearname";
+                ddlfyear.DataValueField = "FinancialYearId";
+                ddlfyear.DataBind();
+                ddlfyear.SelectedValue = Session["financialyear"].ToString().Trim();
+            }
+            catch (Exception exc)
+            {
+                if (exc.Message.Equals("Exception aborted."))
+                {
+                    return;
+                }
+                else
+                {
+                    Response.Cookies["error"].Value = exc.Message;
+                    Server.Transfer("~/ErrorMessage.aspx");
+                }
+            }
+            try
+            {
+                fromdate.Text = DateTime.Now.ToShortDateString();
+                todate.Text = DateTime.Now.ToShortDateString();
+                txtCenter.Text = "All";
+                Session["CenterCode"] = DrMT_sign_Bal_C.Get_CenterDefault(Convert.ToString(Session["UnitCode"] ), Convert.ToInt32(Session["Branchid"]));
+
+                BindGrid();
+            }
+            catch (Exception exc)
+            {
+                if (exc.Message.Equals("Exception aborted."))
+                {
+                    return;
+                }
+                else
+                {
+                    Response.Cookies["error"].Value = exc.Message;
+                    Server.Transfer("~/ErrorMessage.aspx");
+                }
+            }
+        }
+    }
+
+
+ 
+    void BindGrid()
+    {
+        try
+        {
+            int paidamt = 0;
+            string labcode = Convert.ToString(HttpContext.Current.Session["UnitCode"] );
+            if (labcode != null && labcode != "")
+            {
+                this.labcode_main = labcode;
+            }
+            if (Session["usertype"].ToString() == "CollectionCenter")
+            {
+
+                CenterCode = Session["CenterCode"].ToString();
+
+            }
+            if (txtCenter.Text != "")
+            {
+                Center = txtCenter.Text;
+            }
+            if (txtregno.Text != "")
+            {
+                Patregid = txtregno.Text;
+
+            }
+            else if (fromdate.Text != "" && todate.Text != "")
+            {
+                stDate = DateTimeConvesion.getDateFromString(fromdate.Text);
+                endDate = DateTimeConvesion.getDateFromString(todate.Text);
+
+
+            }
+            if (Convert.ToString(ViewState["DocCode"]) != "")
+            {
+                DocCode = Convert.ToString(ViewState["DocCode"]);
+            }
+
+            GVBillFHosp.DataSource = PNB_C.GetPatientforBill_CancelReport(Center, stDate, endDate, Patregid, Convert.ToInt32(Session["Branchid"]), 0, CenterCode, ddlfyear.SelectedValue.PadLeft(2, '0') + "-", this.labcode_main, DocCode, 0);
+            GVBillFHosp.DataBind();
+        }
+        catch (Exception exc)
+        {
+            if (exc.Message.Equals("Exception aborted."))
+            {
+                return;
+            }
+            else
+            {
+                Response.Cookies["error"].Value = exc.Message;
+                Server.Transfer("~/ErrorMessage.aspx");
+            }
+        }
+    }
+    protected void btnshow_Click(object sender, EventArgs e)
+    {
+        BindGrid();
+    }
+
+    protected void GVBillFHosp_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        GVBillFHosp.PageIndex = e.NewPageIndex;
+        BindGrid();
+    }
+    [WebMethod]
+    [ScriptMethod]
+    public static string[] Getcenter(string prefixText, int count)
+    {
+        SqlConnection con = DataAccess.ConInitForDC();
+        SqlDataAdapter sda = null;
+        DataTable dt = new DataTable();
+        int branchid = Convert.ToInt32(HttpContext.Current.Session["Branchid"]);
+        string labcode = Convert.ToString(HttpContext.Current.Session["UnitCode"] );
+        if (labcode != null && labcode != "")
+        {
+            sda = new SqlDataAdapter("SELECT * FROM DrMT where DoctorName like '" + prefixText + "%' and DrType='CC' and Unitcode='" + labcode.ToString().Trim() + "' and branchid=" + branchid + " order by DoctorName", con);
+        }
+        else
+        {
+            sda = new SqlDataAdapter("SELECT * FROM DrMT where DoctorName like '" + prefixText + "%' and DrType='CC' and branchid=" + branchid + " order by DoctorName", con);
+        }
+
+        sda.Fill(dt);
+        string[] tests = new String[dt.Rows.Count + 1];
+        int i = 0;
+        tests.SetValue("All", i); i = i + 1;
+        foreach (DataRow dr in dt.Rows)
+        {
+            tests.SetValue(dr["DoctorName"], i);
+            i++;
+        }
+        return tests;
+    }
+    float total = 0, DisAmt = 0, Taxable = 0, Taxamount = 0, NetAmount = 0;
+    protected void GVBillFHosp_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowIndex != -1)
+        {
+            // LblAmount.Text+=Convert.ToSingle( e.Row.Cells[6].Text.Trim());
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                total += Convert.ToSingle(DataBinder.Eval(e.Row.DataItem, "BillAmt"));
+                DisAmt += Convert.ToSingle(DataBinder.Eval(e.Row.DataItem, "DisAmt"));
+                Taxable += Convert.ToSingle(DataBinder.Eval(e.Row.DataItem, "Taxable"));
+                Taxamount += Convert.ToSingle(DataBinder.Eval(e.Row.DataItem, "Taxamount"));
+                NetAmount += Convert.ToSingle(DataBinder.Eval(e.Row.DataItem, "NetAmount"));
+            }
+
+            LblAmount.Text = total.ToString();
+            Lbldiscount.Text = DisAmt.ToString();
+            Lbltaxable.Text = Taxable.ToString();
+            Lbltaxontaxable.Text = Taxamount.ToString();
+            Lblnetamount.Text = NetAmount.ToString();
+        }
+    }
+
+
+
+
+    protected void btnreport_Click(object sender, EventArgs e)
+    {
+        string sql = "";
+        SqlConnection con = DataAccess.ConInitForDC();
+        SqlCommand cmd1 = con.CreateCommand();
+
+        string query = "ALTER VIEW [dbo].[VW_BillCancel_Report] AS (SELECT   top (99.99) percent  SaleCancelDetails.CancelReceiptNo, SaleCancelDetails.PID, SaleCancelDetails.BillNo, SaleCancelDetails.billdate, "+
+                      "  SaleCancelDetails.AmtPaid,   SaleCancelDetails.PaymentType, SaleCancelDetails.BankName, SaleCancelDetails.branchid, "+
+                       " SaleCancelDetails.transdate, SaleCancelDetails.username,   SaleCancelDetails.BillAmt, SaleCancelDetails.DisAmt, "+
+                       " SaleCancelDetails.BalAmt, SaleCancelDetails.tdate, SaleCancelDetails.PrevBal, SaleCancelDetails.IsActive,   "+
+                       " SaleCancelDetails.TaxPer, SaleCancelDetails.TaxAmount, SaleCancelDetails.PrintCount, patmst.PatRegid, patmst.intial,  " +
+                       " patmst.Patname,   patmst.sex,   patmst.intial+' '+ patmst.Patname as PatientName,    patmst.CenterCode,  "+
+                       " patmst.Drname, patmst.CenterName,   BillAmt-DisAmt as Taxable ,round((BillAmt-DisAmt)+TaxAmount,0) as NetAmount   "+
+                       " FROM         SaleCancelDetails INNER JOIN   patmst ON SaleCancelDetails.PID = patmst.PID  " +
+                     " where PatRegid<>'' and  SaleCancelDetails.branchid=" + Convert.ToInt32(Session["Branchid"]) + "";
+
+       
+        if (txtregno.Text != "")
+        {
+            query += " and PatRegid='" + Convert.ToString(txtregno.Text).Trim() + "'";
+
+        }
+
+        if (fromdate.Text != "" && todate.Text != "")
+        {
+
+            query += " and SaleCancelDetails.billdate between ('" + Convert.ToDateTime(fromdate.Text).ToString("MM/dd/yyyy") + "') and ('" + Convert.ToDateTime(todate.Text).ToString("MM/dd/yyyy") + "')";
+        }
+
+
+
+        cmd1.CommandText = query + ")";
+
+        con.Open();
+        cmd1.ExecuteNonQuery();
+        con.Close(); con.Dispose();
+        Session.Add("rptsql", sql);
+        Session["rptname"] = Server.MapPath("~/DiagnosticReport/Rpt_Bill_CancelReport.rpt");
+        Session["reportname"] = "Bill_CancelReport";
+        Session["RPTFORMAT"] = "pdf";
+
+        ReportParameterClass.SelectionFormula = sql;
+        string close = "<script language='javascript'>javascript:OpenReport();</script>";
+        Type title1 = this.GetType();
+        Page.ClientScript.RegisterStartupScript(title1, "", close);
+
+    }
+    protected void btnexcelrpt_Click(object sender, EventArgs e)
+    {
+       
+        ExportGridToExcel();
+    }
+    private void ExportGridToExcel()
+    {
+        Response.Clear();
+        Response.Buffer = true;
+        Response.ClearContent();
+        Response.ClearHeaders();
+        Response.Charset = "";
+        string FileName = "Bill Cancel Report" + DateTime.Now + ".xls";
+        StringWriter strwritter = new StringWriter();
+        HtmlTextWriter htmltextwrtter = new HtmlTextWriter(strwritter);
+        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        Response.ContentType = "application/vnd.ms-excel";
+        Response.AddHeader("Content-Disposition", "attachment;filename=" + FileName);
+        GVBillFHosp.GridLines = GridLines.Both;
+        GVBillFHosp.HeaderStyle.Font.Bold = true;
+        GVBillFHosp.RenderControl(htmltextwrtter);
+        Response.Write(strwritter.ToString());
+        Response.End();
+
+    }
+    public override void VerifyRenderingInServerForm(Control control)
+    {
+        //required to avoid the run time error "  
+        //Control 'GridView1' of type 'Grid View' must be placed inside a form tag with runat=server."  
+    }
+    protected void GVBillFHosp_RowCreated(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.Header)
+        {
+            GridView HeaderGrid = (GridView)sender;
+            GridViewRow HeaderGridRow = new GridViewRow(0, 0, DataControlRowType.Header, DataControlRowState.Insert);
+            TableCell HeaderCell = new TableCell();
+            HeaderCell.Text = "Bill Cancel Report";
+            // HeaderCell.Font = System.Drawing.Color.Black;
+
+            HeaderCell.ColumnSpan = 14;
+            HeaderGridRow.Cells.Add(HeaderCell);
+            GVBillFHosp.Controls[0].Controls.AddAt(0, HeaderGridRow);
+        }
+    }
+
+    public void checkexistpageright(string PageName)
+    {
+
+        string MenuSQL = "";
+        DataTable MenuDt = new DataTable();
+        MenuSQL = String.Format(@"SELECT        Roleright.Rightid, Roleright.Usertypeid, Roleright.FormId, Roleright.FormName, Roleright.Branchid, usr.ROLENAME, " +
+              "  TBL_SubMenuMaster.SubMenuNavigateURL, TBL_MenuMaster.MenuName, TBL_MenuMaster.MenuID,   TBL_SubMenuMaster.SubMenuName, TBL_MenuMaster.Icon, " +
+              "  TBL_SubMenuMaster.SubMenuID   " +
+              "  FROM            Roleright INNER JOIN   usr ON Roleright.Usertypeid = usr.ROLLID AND Roleright.Branchid = usr.branchid INNER JOIN   " +
+              "  TBL_SubMenuMaster ON Roleright.FormId = TBL_SubMenuMaster.SubMenuID INNER JOIN   TBL_MenuMaster ON TBL_SubMenuMaster.MenuID = TBL_MenuMaster.MenuID INNER JOIN  " +
+              "  CTuser ON Roleright.Usertypeid = CTuser.Rollid  where (CTuser.USERNAME = '" + Convert.ToString(Session["username"]) + "') AND (CTuser.password = '" + Convert.ToString(Session["password"]) + "') and  TBL_SubMenuMaster.Isvisable=1  and TBL_SubMenuMaster.SubMenuNavigateURL='" + PageName + "'  " +
+                               " order by MenuID  ");
+
+
+
+        string connectionString1 = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection(connectionString1);
+
+        SqlCommand cmd = new SqlCommand(MenuSQL, con);
+
+        SqlDataAdapter Adp = new SqlDataAdapter(cmd);
+
+        Adp.Fill(MenuDt);
+        if (MenuDt.Rows.Count == 0)
+        {
+            Response.Redirect("Login.aspx", false);
+        }
+        con.Close();
+        con.Dispose();
+
+    }
+
+}

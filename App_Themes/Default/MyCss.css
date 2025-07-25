@@ -1,0 +1,19 @@
+﻿body 
+{
+    background-color:#ECF5FB;
+    background-image:url('Images/bg.png');
+	background-position:left bottom;
+	background-repeat:repeat-x;
+	height:auto;
+	font-family:Calibri;
+}
+
+.loginbody 
+{
+    background-color:#ECF5FB;
+    background-image:url('Images/bg.png');
+	background-position:left bottom;
+	background-repeat:repeat-x;
+	font-family:Calibri;
+	height:580px;
+}
