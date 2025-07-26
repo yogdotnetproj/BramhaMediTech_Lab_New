@@ -73,7 +73,9 @@
      <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)"/>
 
      <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)"/>
-
+      <link rel="stylesheet" href="customTheme/css/fontawesome-min.css"/>
+<link rel="stylesheet" href="customTheme/css/customTheme.css"/>
+<link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
       
     </head>
 
@@ -81,7 +83,7 @@
     <body class="fixed-navbar has-animation bluetheme"> <%--class="hold-transition skin-black sidebar-mini"--%>
         <form runat="server">
             <div class="regular">
-                <ul class="color-theme">
+               <%-- <ul class="color-theme">
                        <li><a href="#" class="dark-theme"></a></li>
                        <li><a href="#" class="light-theme"></a></li>
                     <li><a href="#" class="red-theme"></a></li>
@@ -89,7 +91,7 @@
                        <li><a href="#" class="darkblue-theme"></a></li>
                     <li><a href="#" class="green-theme"></a></li>
                     <li><a href="#" class="orange-theme"></a></li>
-                </ul>
+                </ul>--%>
             <div class="wrapper">
             <header class="header">
                 <div class="page-brand">

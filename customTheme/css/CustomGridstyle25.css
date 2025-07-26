@@ -1,0 +1,154 @@
+﻿/* General body styling for a clean background */
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom styling for the GridView container */
+/* This class is applied directly to the <asp:GridView> control */
+.custom-gridview {
+    border-radius: 8px; /* Slightly rounded corners for the entire table */
+    overflow: hidden; /* Ensures border-radius applies to table content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft, subtle shadow for depth */
+    margin-top: 20px; /* Space above the table */
+    margin-bottom: 30px; /* Space below the table */
+}
+
+    /* Header styling - Bootstrap's .table-dark handles most of this,
+   but you can add padding or font adjustments here if needed. */
+    .custom-gridview thead th {
+        padding: 15px; /* More padding for header cells */
+        vertical-align: middle;
+        font-weight: bold;
+        color: #fff; /* Ensure text is white for dark header */
+        background-color: #343a40; /* Dark background from .table-dark */
+        border-bottom: 2px solid #495057; /* Slightly darker border at bottom of header */
+    }
+
+    /* Body cell styling */
+    .custom-gridview tbody td {
+        padding: 12px 15px; /* Padding for data cells */
+        vertical-align: middle;
+        border-color: #dee2e6; /* Consistent border color for all cells */
+    }
+
+/* Striped rows and hover effects are handled by Bootstrap's .table-striped and .table-hover
+   classes applied to the GridView. */
+
+/* --- Pagination Styling --- */
+/* The GridView's pager row is typically rendered as a <tr> within the <tfoot> or as a <td>
+   within a <tr> in the <tfoot>. We target the cells and links/spans within it. */
+
+/* Style for the table row that contains the pager */
+.custom-pager-style td {
+    text-align: center; /* Center the pagination links */
+    padding: 15px 0; /* Vertical padding for the pager row */
+    background-color: #f2f2f2; /* Light background for the pager area */
+    border-top: 1px solid #dee2e6; /* A subtle line separating the table body from the pager */
+}
+
+/* Styles for the individual page number links and the current page number (span) */
+.custom-pager-style a,
+.custom-pager-style span {
+    display: inline-block; /* Allows padding and margin */
+    padding: 8px 15px; /* Padding inside the page number buttons */
+    margin: 0 3px; /* Small horizontal space between buttons */
+    border: 1px solid #007bff; /* Primary blue border for buttons */
+    border-radius: 5px; /* Rounded corners for page number buttons */
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Primary blue text color for links */
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Style for the current active page number */
+.custom-pager-style span {
+    background-color: #007bff; /* Active page background */
+    color: #fff; /* Active page text color */
+    font-weight: bold; /* Bold text for active page */
+    border-color: #007bff; /* Active page border color */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Subtle shadow for the active page */
+}
+
+/* Hover effect for page links */
+.custom-pager-style a:hover {
+    background-color: #007bff; /* Background on hover */
+    color: #fff; /* Text color on hover */
+    border-color: #007bff; /* Border color on hover */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Slightly stronger shadow on hover */
+}
+
+/* Styling for disabled pager links (e.g., "Previous" on the first page) */
+/* GridView typically renders disabled links as <span> without href */
+.custom-pager-style span[disabled="disabled"],
+.custom-pager-style a[disabled="disabled"] {
+    color: #6c757d; /* Muted text color */
+    background-color: #e9ecef; /* Lighter background */
+    border-color: #e9ecef; /* Lighter border */
+    cursor: not-allowed; /* Indicate it's not clickable */
+    box-shadow: none; /* No shadow for disabled state */
+}
+
+/* Optional: Styling for a GridView footer, if you use one */
+.custom-footer-style td {
+    background-color: #e9ecef; /* Light background for footer */
+    padding: 10px 15px;
+    font-weight: bold;
+    border-top: 1px solid #dee2e6;
+}
+/**Custom Pagination*/
+.custom-footer-style table td,
+.custom-footer-style table {
+    margin: auto;
+    background: #fff;
+    border-radius: 40px;
+    padding: 5px;
+}
+.custom-footer-style table td span,
+.custom-footer-style table td a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.custom-footer-style table td span,
+.custom-footer-style table td span:hover,
+.custom-footer-style table td a:hover {
+    background: #57375D;
+    box-shadow: 0 0 10px 0 rgba(87, 55, 93, 0.5);
+    transition-duration: 500ms;
+    color: #fff !important;
+    position: relative;
+    overflow: hidden;
+}
+.custom-footer-style table td span::before,
+.custom-footer-style table td a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -115%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+}
+.custom-footer-style table td span:hover::before,
+.custom-footer-style table td a:hover::before {
+    animation-delay: 800ms;
+    animation: shine 0.75s forwards;
+}
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
