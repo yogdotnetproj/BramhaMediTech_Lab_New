@@ -33,14 +33,18 @@
     <script src="amcharts/serial.js" type="text/javascript"></script>
     <script type="text/javascript" src="amcharts/pie.js"></script>
     <script type="text/javascript" src="amcharts/themes/light.js"></script>
+
+     <link rel="stylesheet" href="customTheme/css/fontawesome-min.css"/>
+    <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
+    <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
 </head>
-<body class="fixed-navbar has-animation bluetheme">
+<body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
     <form id="form1" runat="server">
     <script src="fusioncharts/FusionCharts.js" type="text/javascript"></script>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <div class="regular">
-        <ul class="color-theme">
+       <%-- <ul class="color-theme">
                        <li><a href="#" class="dark-theme"></a></li>
                        <li><a href="#" class="light-theme"></a></li>
                     <li><a href="#" class="red-theme"></a></li>
@@ -48,53 +52,141 @@
                        <li><a href="#" class="darkblue-theme"></a></li>
                     <li><a href="#" class="green-theme"></a></li>
                     <li><a href="#" class="orange-theme"></a></li>
-                </ul>
+                </ul>--%>
         <div class="wrapper">
-          <header class="header">
-            <div class="page-brand">
-                <a class="link" href="index.html">
-                    <span class="brand"> 
-                        <span class="brand-tip">LIS Management System</span>
-                    </span>
-                    <span class="brand-mini">LIS</span>
-                </a>
-            </div>
-            <div class="flexbox flex-1">
-                <!-- START TOP-LEFT TOOLBAR-->
-                <ul class="nav navbar-toolbar">
-                    <li>
-                        <a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="fa fa-bars"></i></a>
-                    </li>
-                    <!--<li>
-                        <form class="navbar-search" action="javascript:;">
-                         <!-- Logo --
-                <a href="dashboard.aspx" class="logo" style="width:194px">
-                    <!-- mini logo for sidebar mini 50x50 pixels --
-                </a>
-                        </form>
-                    </li>-->
-                </ul>
-                <!-- END TOP-LEFT TOOLBAR-->
-                <div class="text-center"> <span class="logo-mini"><img src="images/logo.png" style="width:10rem;" /></span></div>
-                <!-- START TOP-RIGHT TOOLBAR-->
-                <ul class="nav navbar-toolbar">
-                   
-                 
-                    <li class="dropdown dropdown-user">
-                        <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
-                            <img src="./assets/img/admin-avatar.png" />
-                            <span><asp:Label ID="UsernameLB" runat="server" Text=""></asp:Label></span><i class="fa fa-angle-down m-l-5"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="Home.aspx"><i class="fa fa-fw fa-home"></i>Home</a>
-                            <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-key"></i>key</a>
-                            <li class="dropdown-divider"></li>
-                            <a class="dropdown-item" href="Login.aspx"><i class="fa fa-fw fa-power-off"></i>Logout</a>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- END TOP-RIGHT TOOLBAR-->
-            </div>
-        </header>
+        <header class="page-header row">
+   <div class="logo-wrapper d-flex align-items-center col-auto">
+     <a href="Home.aspx">
+       <img class="light-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo">
+       <img class="dark-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo"></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
+       <svg class="svg-color" id="toggleMenu">
+         <use href="customTheme/svg/iconly-sprite.svg#Category"></use>
+       </svg>
+     </a>
+   </div>
+   <div class="page-main-header col">
+     <div class="header-left">
+       <div class="form-group-header d-lg-block d-none">
+         <div class="Typeahead Typeahead--twitterUsers">
+           <div class="u-posRelative d-flex align-items-center"> 
+             <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Type to Search..." name="q" title=""><i class="search-bg iconly-Search icli"></i>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="nav-right">
+       <ul class="header-right"> 
+         <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
+           <svg>
+             <use href="customTheme/svg/iconly-sprite.svg#Search"></use>
+           </svg></a>
+         </li>
+         <li>
+           <a class="dark-mode" href="javascript:void(0)">
+             <svg>
+               <use href="customTheme/svg/iconly-sprite.svg#moondark"></use>
+             </svg></a>
+         </li>
+         <li class="custom-dropdown">
+             <a href="javascript:void(0)" id="notificationMenu">
+                 <svg>
+                     <use href="customTheme/svg/iconly-sprite.svg#notification"></use>
+                 </svg>
+             </a>
+             <span class="badge rounded-pill badge-primary">4</span>
+             <div class="custom-menu notification-dropdown py-0 overflow-hidden" id="notificationMenuWrapper">
+                 <h3 class="title bg-primary-light dropdown-title">Notification <span class="font-primary">View all</span></h3>
+                 <ul class="activity-timeline">
+                     <li class="d-flex align-items-start">
+                       <div class="activity-line"></div>
+                       <div class="activity-dot-primary"></div>
+                       <div class="flex-grow-1">
+                         <h6 class="f-w-600 font-primary">30-04-2024<span>Today</span><span class="circle-dot-primary float-end">
+                             <svg class="circle-color">
+                               <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                             </svg></span></h6>
+                         <h5>Alice Goodwin</h5>
+                         <p class="mb-0">Fashion should be fun. It shouldn't be labelled intellectual.</p>
+                       </div>
+                     </li>
+                     <li class="d-flex align-items-start">
+                         <div class="activity-dot-secondary"></div>
+                         <div class="flex-grow-1">
+                             <h6 class="f-w-600 font-secondary">28-06-2024<span>1 hour ago</span><span class="float-end circle-dot-secondary">
+                               <svg class="circle-color">
+                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                               </svg></span>
+                             </h6>
+                             <h5>Herry Venter</h5>
+                             <p>I am convinced that there can be luxury in simplicity.</p>
+                         </div>
+                     </li>
+                     <li class="d-flex align-items-start">
+                         <div class="activity-dot-primary"></div>
+                         <div class="flex-grow-1">
+                           <h6 class="f-w-600 font-primary">04-08-2024<span>Today</span><span class="float-end circle-dot-primary">
+                               <svg class="circle-color">
+                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                               </svg></span>
+                           </h6>
+                           <h5>Loain Deo</h5>
+                           <p>I feel that things happen for open new opportunities.</p>
+                         </div>
+                     </li>
+                     <li class="d-flex align-items-start">
+                         <div class="activity-dot-secondary"></div>
+                         <div class="flex-grow-1">
+                           <h6 class="f-w-600 font-secondary">12-11-2024<span>Yesterday</span><span class="float-end circle-dot-secondary">
+                               <svg class="circle-color">
+                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                               </svg></span>
+                           </h6>
+                           <h5>Fenter Jessy</h5>
+                           <p>Sometimes the simplest things are the most profound.</p>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+         </li>
+         <li>
+           <a class="full-screen" href="javascript:void(0)"> 
+             <svg>
+               <use href="customTheme/svg/iconly-sprite.svg#scanfull"></use>
+             </svg>
+           </a>
+         </li>
+         <li class="profile-nav custom-dropdown">
+           <div class="user-wrap">
+             <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
+             <div class="user-content" id="userMenu">
+               <h6>Ava Davis</h6>
+               <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+             </div>
+           </div>
+           <div class="custom-menu overflow-hidden" id="userMenuWrapper">
+             <ul class="profile-body">
+               <li class="d-flex"> 
+                 <svg class="svg-color">
+                   <use href="customTheme/svg/iconly-sprite.svg#Profile"></use>
+                 </svg><a class="ms-2" href="Home.aspx">Home</a>
+               </li>
+               <li class="d-flex"> 
+                 <svg class="svg-color">
+                   <use href="customTheme/svg/iconly-sprite.svg#Document"></use>
+                 </svg><a class="ms-2" href="ChangePassword.aspx">Change Password</a>
+               </li>
+               <li class="d-flex"> 
+                 <svg class="svg-color">
+                   <use href="customTheme/svg/iconly-sprite.svg#Login"></use>
+                 </svg><a class="ms-2" href="login.aspx">Log Out</a>
+               </li>
+             </ul>
+           </div>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </header>
             <!-- Left side column. contains the logo and sidebar -->
           <nav class="page-sidebar" id="sidebar">
             <div id="sidebar-collapse">

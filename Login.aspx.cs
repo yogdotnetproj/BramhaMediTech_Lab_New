@@ -49,13 +49,13 @@ public partial class Login : System.Web.UI.Page
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        PAtValidate();
-            string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
-        if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("27 /11/ 2025"))
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Input string was not in correct format...');", true);
-            return;
-        }
+       // PAtValidate();
+        //    string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
+        //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("27 /11/ 2025"))
+        //{
+        //    //ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Input string was not in correct format...');", true);
+        //    //return;
+        //}
       DataTable  dtban = ObjTB.Bindbanner();
       Session["Bannername"] = Convert.ToString(dtban.Rows[0]["BannerName"]).Trim();
       Session["BannerCode"] = Convert.ToString(dtban.Rows[0]["BannerName"]).Trim();
@@ -330,7 +330,7 @@ public partial class Login : System.Web.UI.Page
             string BCount = Patmst_New_Bal_C.PatientCountBanner(1);
             if (Convert.ToInt32(BCount) > 1111)
             {
-                Server.Transfer("~/Login.aspx", true);
+               // Server.Transfer("~/Login.aspx", true);
             }
         }
     }
