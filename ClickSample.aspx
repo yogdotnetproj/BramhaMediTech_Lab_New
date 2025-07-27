@@ -131,8 +131,8 @@
 
 
                 <!----------------------------------------------------->
-                <div class="container pt-2">
-                    <div class="panel panel-default">
+                <div class="pt-2">
+                    <div class="panel panel-default bg-white p-3">
 
                         <div class="panel-body">
 

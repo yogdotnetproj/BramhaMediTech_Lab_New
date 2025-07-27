@@ -9396,10 +9396,10 @@ textarea.form-control-lg {
     background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-white {
+/*.bg-white {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
-}
+}*/
 
 .bg-body {
     --bs-bg-opacity: 1;
@@ -54101,4 +54101,8 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
 .radioButtonGroupRbl input[type="radio"] + label {
     margin-left: 0;
     margin-right: 20px;
+}
+
+.content-wrapper {
+    background: #f8f9fc;
 }

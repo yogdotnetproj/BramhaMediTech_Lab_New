@@ -22,7 +22,7 @@
                     </ol>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content bg-white p-3">
                     <div class="box">
                         <div class="box-body">
                             <div class="row mb-3">
@@ -30,11 +30,11 @@
                                     <div class="form-group">
                                        
                                         <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">
+                                        <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->  
+                                        <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div> 
-                                          <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->  
-                                            <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1">
                                       </asp:TextBox>   
                                        
                            

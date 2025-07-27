@@ -55,148 +55,148 @@
                 </ul>--%>
         <div class="wrapper">
         <header class="page-header row">
-   <div class="logo-wrapper d-flex align-items-center col-auto">
-     <a href="Home.aspx">
-       <img class="light-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo">
-       <img class="dark-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo"></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
-       <svg class="svg-color" id="toggleMenu">
-         <use href="customTheme/svg/iconly-sprite.svg#Category"></use>
-       </svg>
-     </a>
-   </div>
-   <div class="page-main-header col">
-     <div class="header-left">
-       <div class="form-group-header d-lg-block d-none">
-         <div class="Typeahead Typeahead--twitterUsers">
-           <div class="u-posRelative d-flex align-items-center"> 
-             <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Type to Search..." name="q" title=""><i class="search-bg iconly-Search icli"></i>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="nav-right">
-       <ul class="header-right"> 
-         <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
-           <svg>
-             <use href="customTheme/svg/iconly-sprite.svg#Search"></use>
-           </svg></a>
-         </li>
-         <li>
-           <a class="dark-mode" href="javascript:void(0)">
-             <svg>
-               <use href="customTheme/svg/iconly-sprite.svg#moondark"></use>
-             </svg></a>
-         </li>
-         <li class="custom-dropdown">
-             <a href="javascript:void(0)" id="notificationMenu">
-                 <svg>
-                     <use href="customTheme/svg/iconly-sprite.svg#notification"></use>
-                 </svg>
+           <div class="logo-wrapper d-flex align-items-center col-auto">
+             <a href="Home.aspx">
+               <img class="light-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo">
+               <img class="dark-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo"></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
+               <svg class="svg-color" id="toggleMenu">
+                 <use href="customTheme/svg/iconly-sprite.svg#Category"></use>
+               </svg>
              </a>
-             <span class="badge rounded-pill badge-primary">4</span>
-             <div class="custom-menu notification-dropdown py-0 overflow-hidden" id="notificationMenuWrapper">
-                 <h3 class="title bg-primary-light dropdown-title">Notification <span class="font-primary">View all</span></h3>
-                 <ul class="activity-timeline">
-                     <li class="d-flex align-items-start">
-                       <div class="activity-line"></div>
-                       <div class="activity-dot-primary"></div>
-                       <div class="flex-grow-1">
-                         <h6 class="f-w-600 font-primary">30-04-2024<span>Today</span><span class="circle-dot-primary float-end">
-                             <svg class="circle-color">
-                               <use href="../assets/svg/iconly-sprite.svg#circle"></use>
-                             </svg></span></h6>
-                         <h5>Alice Goodwin</h5>
-                         <p class="mb-0">Fashion should be fun. It shouldn't be labelled intellectual.</p>
-                       </div>
-                     </li>
-                     <li class="d-flex align-items-start">
-                         <div class="activity-dot-secondary"></div>
-                         <div class="flex-grow-1">
-                             <h6 class="f-w-600 font-secondary">28-06-2024<span>1 hour ago</span><span class="float-end circle-dot-secondary">
-                               <svg class="circle-color">
-                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
-                               </svg></span>
-                             </h6>
-                             <h5>Herry Venter</h5>
-                             <p>I am convinced that there can be luxury in simplicity.</p>
-                         </div>
-                     </li>
-                     <li class="d-flex align-items-start">
-                         <div class="activity-dot-primary"></div>
-                         <div class="flex-grow-1">
-                           <h6 class="f-w-600 font-primary">04-08-2024<span>Today</span><span class="float-end circle-dot-primary">
-                               <svg class="circle-color">
-                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
-                               </svg></span>
-                           </h6>
-                           <h5>Loain Deo</h5>
-                           <p>I feel that things happen for open new opportunities.</p>
-                         </div>
-                     </li>
-                     <li class="d-flex align-items-start">
-                         <div class="activity-dot-secondary"></div>
-                         <div class="flex-grow-1">
-                           <h6 class="f-w-600 font-secondary">12-11-2024<span>Yesterday</span><span class="float-end circle-dot-secondary">
-                               <svg class="circle-color">
-                                 <use href="../assets/svg/iconly-sprite.svg#circle"></use>
-                               </svg></span>
-                           </h6>
-                           <h5>Fenter Jessy</h5>
-                           <p>Sometimes the simplest things are the most profound.</p>
-                         </div>
-                     </li>
-                 </ul>
+           </div>
+           <div class="page-main-header col">
+             <div class="header-left">
+               <div class="form-group-header d-lg-block d-none">
+                 <div class="Typeahead Typeahead--twitterUsers">
+                   <div class="u-posRelative d-flex align-items-center"> 
+                     <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Type to Search..." name="q" title=""><i class="search-bg iconly-Search icli"></i>
+                   </div>
+                 </div>
+               </div>
              </div>
-         </li>
-         <li>
-           <a class="full-screen" href="javascript:void(0)"> 
-             <svg>
-               <use href="customTheme/svg/iconly-sprite.svg#scanfull"></use>
-             </svg>
-           </a>
-         </li>
-         <li class="profile-nav custom-dropdown">
-           <div class="user-wrap">
-             <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
-             <div class="user-content" id="userMenu">
-               <h6>Ava Davis</h6>
-               <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+             <div class="nav-right">
+               <ul class="header-right"> 
+                 <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
+                   <svg>
+                     <use href="customTheme/svg/iconly-sprite.svg#Search"></use>
+                   </svg></a>
+                 </li>
+                 <li>
+                   <a class="dark-mode" href="javascript:void(0)">
+                     <svg>
+                       <use href="customTheme/svg/iconly-sprite.svg#moondark"></use>
+                     </svg></a>
+                 </li>
+                 <li class="custom-dropdown">
+                     <a href="javascript:void(0)" id="notificationMenu">
+                         <svg>
+                             <use href="customTheme/svg/iconly-sprite.svg#notification"></use>
+                         </svg>
+                     </a>
+                     <span class="badge rounded-pill badge-primary">4</span>
+                     <div class="custom-menu notification-dropdown py-0 overflow-hidden" id="notificationMenuWrapper">
+                         <h3 class="title bg-primary-light dropdown-title">Notification <span class="font-primary">View all</span></h3>
+                         <ul class="activity-timeline">
+                             <li class="d-flex align-items-start">
+                               <div class="activity-line"></div>
+                               <div class="activity-dot-primary"></div>
+                               <div class="flex-grow-1">
+                                 <h6 class="f-w-600 font-primary">30-04-2024<span>Today</span><span class="circle-dot-primary float-end">
+                                     <svg class="circle-color">
+                                       <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                     </svg></span></h6>
+                                 <h5>Alice Goodwin</h5>
+                                 <p class="mb-0">Fashion should be fun. It shouldn't be labelled intellectual.</p>
+                               </div>
+                             </li>
+                             <li class="d-flex align-items-start">
+                                 <div class="activity-dot-secondary"></div>
+                                 <div class="flex-grow-1">
+                                     <h6 class="f-w-600 font-secondary">28-06-2024<span>1 hour ago</span><span class="float-end circle-dot-secondary">
+                                       <svg class="circle-color">
+                                         <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                       </svg></span>
+                                     </h6>
+                                     <h5>Herry Venter</h5>
+                                     <p>I am convinced that there can be luxury in simplicity.</p>
+                                 </div>
+                             </li>
+                             <li class="d-flex align-items-start">
+                                 <div class="activity-dot-primary"></div>
+                                 <div class="flex-grow-1">
+                                   <h6 class="f-w-600 font-primary">04-08-2024<span>Today</span><span class="float-end circle-dot-primary">
+                                       <svg class="circle-color">
+                                         <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                       </svg></span>
+                                   </h6>
+                                   <h5>Loain Deo</h5>
+                                   <p>I feel that things happen for open new opportunities.</p>
+                                 </div>
+                             </li>
+                             <li class="d-flex align-items-start">
+                                 <div class="activity-dot-secondary"></div>
+                                 <div class="flex-grow-1">
+                                   <h6 class="f-w-600 font-secondary">12-11-2024<span>Yesterday</span><span class="float-end circle-dot-secondary">
+                                       <svg class="circle-color">
+                                         <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                       </svg></span>
+                                   </h6>
+                                   <h5>Fenter Jessy</h5>
+                                   <p>Sometimes the simplest things are the most profound.</p>
+                                 </div>
+                             </li>
+                         </ul>
+                     </div>
+                 </li>
+                 <li>
+                   <a class="full-screen" href="javascript:void(0)"> 
+                     <svg>
+                       <use href="customTheme/svg/iconly-sprite.svg#scanfull"></use>
+                     </svg>
+                   </a>
+                 </li>
+                 <li class="profile-nav custom-dropdown">
+                   <div class="user-wrap">
+                     <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
+                     <div class="user-content" id="userMenu">
+                       <h6>Ava Davis</h6>
+                       <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+                     </div>
+                   </div>
+                   <div class="custom-menu overflow-hidden" id="userMenuWrapper">
+                     <ul class="profile-body">
+                       <li class="d-flex"> 
+                         <svg class="svg-color">
+                           <use href="customTheme/svg/iconly-sprite.svg#Profile"></use>
+                         </svg><a class="ms-2" href="Home.aspx">Home</a>
+                       </li>
+                       <li class="d-flex"> 
+                         <svg class="svg-color">
+                           <use href="customTheme/svg/iconly-sprite.svg#Document"></use>
+                         </svg><a class="ms-2" href="ChangePassword.aspx">Change Password</a>
+                       </li>
+                       <li class="d-flex"> 
+                         <svg class="svg-color">
+                           <use href="customTheme/svg/iconly-sprite.svg#Login"></use>
+                         </svg><a class="ms-2" href="login.aspx">Log Out</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </li>
+               </ul>
              </div>
            </div>
-           <div class="custom-menu overflow-hidden" id="userMenuWrapper">
-             <ul class="profile-body">
-               <li class="d-flex"> 
-                 <svg class="svg-color">
-                   <use href="customTheme/svg/iconly-sprite.svg#Profile"></use>
-                 </svg><a class="ms-2" href="Home.aspx">Home</a>
-               </li>
-               <li class="d-flex"> 
-                 <svg class="svg-color">
-                   <use href="customTheme/svg/iconly-sprite.svg#Document"></use>
-                 </svg><a class="ms-2" href="ChangePassword.aspx">Change Password</a>
-               </li>
-               <li class="d-flex"> 
-                 <svg class="svg-color">
-                   <use href="customTheme/svg/iconly-sprite.svg#Login"></use>
-                 </svg><a class="ms-2" href="login.aspx">Log Out</a>
-               </li>
-             </ul>
-           </div>
-         </li>
-       </ul>
-     </div>
-   </div>
- </header>
+         </header>
             <!-- Left side column. contains the logo and sidebar -->
           <nav class="page-sidebar" id="sidebar">
             <div id="sidebar-collapse">
-                <div class="admin-block d-flex">
+                <!--div class="admin-block d-flex">
                     <div>
                         <img src="./assets/img/admin-avatar.png" width="45px" />
                     </div>
                     <div class="admin-info">
                         <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small>Administrator</small></div>
-                </div>
+                </div-->
                 <ul class="side-menu metismenu">
                     <li>
                         <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
@@ -209,196 +209,198 @@
         </nav>
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                <!-- Main content -->
-                <div class="box p-3 bg-white">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">
-                            Total number of patients daywise</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body"">
-                        <div class="row">
-                             <div class="col-md-5">
-                                 </div>
-                            <div class="col-md-3">
-                                 <input type="text" class="form-control"  id="txtCenterName" />
-                            </div>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control" id="datepicker11" />
-                            </div>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control" id="datepicker1" />
+                <div class="content px-3">
+                    <!-- Main content -->
+                    <div class="box p-3 bg-white mb-3">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">
+                                Total number of patients daywise</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="chart">
-                                    <div id="chartdiv11" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                        <!-- /.box-header -->
+                        <div class="box-body"">
+                            <div class="row">
+                                 <div class="col-md-5">
+                                     </div>
+                                <div class="col-md-3">
+                                     <input type="text" class="form-control"  id="txtCenterName" />
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control" id="datepicker11" />
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control" id="datepicker1" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="chart">
+                                        <div id="chartdiv11" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="box-footer" style="">
-                    </div>
-                </div>
-                <div class="box p-3 bg-white" hidden="hidden">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">
-                            Total number of patients daywise</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                <i class="fa fa-minus"></i>
-                            </button>
+                        <div class="box-footer" style="">
                         </div>
                     </div>
-                    <!-- /.box-header -->
-                    <div class="box-body" style="background-color: white;">
-                        <div class="row">
-                            <div class="col-md-9">
-                            </div>
-                            <div class="col-md-2">
-                                <select name="months" class="months1 form-control" id="months2">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                            </div>
-                            <div class="col-md-1">
-                                <input type="text" class="form-control" id="datepicker2" />
+                    <div class="box p-3 bg-white mb-3" hidden="hidden">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">
+                                Total number of patients daywise</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="chart">
-                                    <div id="chartdiv12" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                        <!-- /.box-header -->
+                        <div class="box-body" style="background-color: white;">
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="months" class="months1 form-control" id="months2">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <input type="text" class="form-control" id="datepicker2" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="chart">
+                                        <div id="chartdiv12" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="box-footer" style="">
-                    </div>
-                </div>
-                <div class="box" style="background-color: white;">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">
-                            Total patients by department</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                <i class="fa fa-minus"></i>
-                            </button>
+                        <div class="box-footer" style="">
                         </div>
                     </div>
-                    <!-- /.box-header -->
-                    <div class="box-body" style="background-color: white;">
-                        <div class="row">
-                            <div class="col-md-9">
-                            </div>
-                            <div class="col-md-2">
-                                <select name="months3" class="months3 form-control" id="months3">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                            </div>
-                            <div class="col-md-1">
-                                <input type="text" class="form-control" id="datepicker3" />
+                    <div class="box p-3 mb-3" style="background-color: white;">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">
+                                Total patients by department</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="chart">
-                                    <div id="chartdiv13" style="width: 100%; height: 400px; background-color: #FFFFFF;">
-                                    </div>
+                        <!-- /.box-header -->
+                        <div class="box-body" style="background-color: white;">
+                            <div class="row">
+                                <div class="col-md-9">
                                 </div>
-                                <!-- /.chart-responsive -->
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- ./box-body -->
-                    <div class="box-footer" style="">
-                    </div>
-                    <!-- /.box-footer -->
-                </div>
-                <div class="box col-md-6" style="background-color: white;">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">
-                            Top 5 Referal Doctors</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body" style="background-color: white;">
-                        <div class="row">
-                            <div class="col-md-6">
-                            </div>
-                            <div class="col-md-3">
-                                <select name="months" class="months4 form-control" id="months4">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control" id="datepicker4" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="chart">
-                                    <div id="chartdiv14" style="width: 100%; height: 400px; background-color: #FFFFFF;">
-                                    </div>
+                                <div class="col-md-2">
+                                    <select name="months3" class="months3 form-control" id="months3">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
                                 </div>
-                                <!-- /.chart-responsive -->
+                                <div class="col-md-1">
+                                    <input type="text" class="form-control" id="datepicker3" />
+                                </div>
                             </div>
-                            <!-- /.col -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="chart">
+                                        <div id="chartdiv13" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                        </div>
+                                    </div>
+                                    <!-- /.chart-responsive -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
                         </div>
-                        <!-- /.row -->
+                        <!-- ./box-body -->
+                        <div class="box-footer" style="">
+                        </div>
+                        <!-- /.box-footer -->
                     </div>
-                    <!-- ./box-body -->
-                    <div class="box-footer" style="">
+                    <div class="box p-3 col-md-12" style="background-color: white;">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">
+                                Top 5 Referal Doctors</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body" style="background-color: white;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-3">
+                                    <select name="months" class="months4 form-control" id="months4">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="datepicker4" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="chart">
+                                        <div id="chartdiv14" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                        </div>
+                                    </div>
+                                    <!-- /.chart-responsive -->
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- ./box-body -->
+                        <div class="box-footer" style="">
+                        </div>
+                        <!-- /.box-footer -->
                     </div>
-                    <!-- /.box-footer -->
+                    <!-- /.content -->
                 </div>
-                <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer text-center">
@@ -1151,6 +1153,58 @@
              $('body').addClass('darkbluetheme');
              $('body').removeClass('redtheme bluetheme greentheme lighttheme darktheme orangetheme');
          });
-</script>
+         $('#notificationMenu').on('click', function () {
+             $('#notificationMenuWrapper').toggleClass('show');
+             e.preventDefault();
+         });
+         $('#userMenu').on('click', function () {
+             $('#userMenuWrapper').toggleClass('show');
+             e.preventDefault();
+         });
+         $('#toggleMenu').on('click', function () {
+             $('#bodyWrapper').toggleClass('collapsed');
+             e.preventDefault();
+         });
+         $(".metismenu > li").on('click', function () {
+             // console.log($('.metismenu li.active ul'));
+             if ($('.metismenu li.active ul')[0]) {
+                 $('#subMenuWrapper').html($('.metismenu li.active ul')[0].innerHTML);
+                 if (($('.metismenu li.active ul').closest('li.active').offset().top + $('#subMenuWrapper').height()) > $(window).height()) {
+                     $('#subMenuWrapper').css({
+                         top: $('.metismenu li.active ul').closest('li.active').offset().top - 25 - $('#subMenuWrapper').height(),
+                         left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                     });
+                 } else {
+                     $('#subMenuWrapper').css({
+                         top: $('.metismenu li.active ul').closest('li.active').offset().top - 75,
+                         left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                     });
+                 }
+             } else {
+                 $('#subMenuWrapper').html('');
+                 $('#subMenuWrapper').css({
+                     top: 0,
+                     left: 0
+                 });
+             }
+             // e.preventDefault();
+         });
+         $(document).on('click', function (e) {
+             if (!$(e.target).closest('#subMenuWrapper').length && !$(e.target).closest('.metismenu li.active').length && !$(e.target).closest('.logo-wrapper').length) {
+                 $('#subMenuWrapper').html('');
+                 $('#subMenuWrapper').css({
+                     top: 0,
+                     left: 0
+                 });
+                 $('.metismenu li.active').removeClass('active');
+             }
+             if (!$(e.target).closest('#notificationMenu').length) {
+                 $('#notificationMenuWrapper').removeClass('show');
+             }
+             if (!$(e.target).closest('#userMenu').length) {
+                 $('#userMenuWrapper').removeClass('show');
+             }
+         });
+     </script>
 </body>
 </html>
