@@ -10,7 +10,7 @@ using BAL;
 using System.Data.SqlClient;
 
 using System.Configuration;
-public partial class SubdeptAdd : System.Web.UI.Page
+public partial class SubdeptAdd :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     main_Bal_C main = new main_Bal_C();

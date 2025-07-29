@@ -22,7 +22,7 @@ using System.Drawing;
 using System.Net.Http;
 
 
-public partial class TestCytoResult : System.Web.UI.Page
+public partial class TestCytoResult :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

@@ -17,7 +17,7 @@ using System.Net.Mail;
 using System.Web.Management;
 using System.Net;
 using System.IO;
-public partial class BillDesk : System.Web.UI.Page
+public partial class BillDesk :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

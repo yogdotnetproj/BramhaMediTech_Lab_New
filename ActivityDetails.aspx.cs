@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class ActivityDetails : System.Web.UI.Page
+public partial class ActivityDetails :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

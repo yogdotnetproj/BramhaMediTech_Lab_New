@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 
 
-public partial class OperatorwiseReport : System.Web.UI.Page
+public partial class OperatorwiseReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     DataTable dt = new DataTable();

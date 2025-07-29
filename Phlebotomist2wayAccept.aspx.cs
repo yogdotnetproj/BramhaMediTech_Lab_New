@@ -12,7 +12,7 @@ using System.Collections;
 using System.Configuration;
 using System.Drawing;
 
-public partial class Phlebotomist2wayAccept : System.Web.UI.Page
+public partial class Phlebotomist2wayAccept :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     string Center_Code = "", patientName = "", Reg_no = "", labcode_main = "", Barcode = "", NewBarcode = "",PPID="";

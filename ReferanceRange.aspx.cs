@@ -17,7 +17,7 @@ using System.Web.Script.Services;
 using System.Net;
 using System.IO;
 using System.Web.Security;
-public partial class ReferanceRange : System.Web.UI.Page
+public partial class ReferanceRange :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

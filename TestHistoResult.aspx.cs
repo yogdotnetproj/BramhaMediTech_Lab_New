@@ -20,7 +20,7 @@ using System.Drawing;
 
 
 using System.Net.Http;
-public partial class TestHistoResult : System.Web.UI.Page
+public partial class TestHistoResult :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

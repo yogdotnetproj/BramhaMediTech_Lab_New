@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class BarcodeDirectPrint : System.Web.UI.Page
+public partial class BarcodeDirectPrint :BasePage
 {
     string MTCode;
     Patmst_New_Bal_C ObjPNBC = new Patmst_New_Bal_C();

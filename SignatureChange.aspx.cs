@@ -13,7 +13,7 @@ using System.Configuration;
 using System.Drawing;
 
 
-public partial class SignatureChange : System.Web.UI.Page
+public partial class SignatureChange :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     string Center_Code = "", patientName = "", Reg_no = "", labcode_main = "", Barcode = "";

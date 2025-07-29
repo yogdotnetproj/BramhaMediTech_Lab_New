@@ -12,7 +12,7 @@ using System.Web.Services;
 using System.Web.Script.Services;
 using System.IO;
 
-public partial class AddTestRate : System.Web.UI.Page
+public partial class AddTestRate :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DrMT_sign_Bal_C obj = new DrMT_sign_Bal_C();

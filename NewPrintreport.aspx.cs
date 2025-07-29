@@ -19,7 +19,7 @@ using System.Diagnostics;
 using System.Web.Services;
 using System.Web.Script.Services;
 
-public partial class NewPrintreport : System.Web.UI.Page
+public partial class NewPrintreport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     object status = null;

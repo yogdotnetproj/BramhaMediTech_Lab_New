@@ -16,7 +16,7 @@ using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class EditPatientInfo : System.Web.UI.Page
+public partial class EditPatientInfo :BasePage
 {
     string maintestshort = "";
     TreeviewBind_C ObjTB = new TreeviewBind_C();

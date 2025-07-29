@@ -13,7 +13,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 
-public partial class DueSummary : System.Web.UI.Page
+public partial class DueSummary :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     DataTable dt = new DataTable();

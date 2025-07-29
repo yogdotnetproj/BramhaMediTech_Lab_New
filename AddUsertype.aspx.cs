@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class AddUsertype : System.Web.UI.Page
+public partial class AddUsertype :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

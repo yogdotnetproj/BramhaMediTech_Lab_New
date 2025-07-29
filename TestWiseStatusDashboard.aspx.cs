@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Configuration;
 using System.Collections;
-public partial class TestWiseStatusDashboard : System.Web.UI.Page
+public partial class TestWiseStatusDashboard :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     AdminSettings_C ObjAs = new AdminSettings_C();

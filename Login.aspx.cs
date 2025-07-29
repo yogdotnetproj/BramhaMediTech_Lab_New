@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
-public partial class Login : System.Web.UI.Page
+public partial class Login :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dtderial = new DataTable();

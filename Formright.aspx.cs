@@ -8,7 +8,7 @@ using System.Data;
 using System.Configuration;
 using System.Collections;
 
-public partial class Formright : System.Web.UI.Page
+public partial class Formright :BasePage
 {
     DataTable dt = new DataTable();
     dbconnection dc = new dbconnection();

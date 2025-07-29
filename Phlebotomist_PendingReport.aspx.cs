@@ -16,7 +16,7 @@ using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class Phlebotomist_PendingReport : System.Web.UI.Page
+public partial class Phlebotomist_PendingReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     string labcode_main = "";

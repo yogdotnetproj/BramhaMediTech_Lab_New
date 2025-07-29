@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class Salesummaryreport_IRD : System.Web.UI.Page
+public partial class Salesummaryreport_IRD :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     DataTable dt = new DataTable();

@@ -18,7 +18,7 @@ using System.Web.UI.HtmlControls;
 using System.Drawing;
 using System.Net.Http;
 
-public partial class OnlineBookAppoinment : System.Web.UI.Page
+public partial class OnlineBookAppoinment :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
 

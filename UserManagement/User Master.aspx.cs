@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using BAL;
 
-public partial class User_Master : System.Web.UI.Page
+public partial class User_Master :BasePage
 {
     ClsAddUser objuser = new ClsAddUser();
     UserAddBranch_Bal_C objbranch = new UserAddBranch_Bal_C();

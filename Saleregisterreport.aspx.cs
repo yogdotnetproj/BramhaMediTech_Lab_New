@@ -16,7 +16,7 @@ using System.Web.Management;
 
 using System.Web.Services;
 using System.Web.Script.Services;
-public partial class Saleregisterreport : System.Web.UI.Page
+public partial class Saleregisterreport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     DataTable dt = new DataTable();

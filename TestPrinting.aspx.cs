@@ -21,7 +21,7 @@ using System.Drawing;
 
 using System.Net.Http;
 
-public partial class TestPrinting : System.Web.UI.Page
+public partial class TestPrinting :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

@@ -17,7 +17,7 @@ using System.Web.Script.Services;
 using System.Data.SqlClient;
 using System.Drawing;
 
-public partial class CreatePackage : System.Web.UI.Page
+public partial class CreatePackage :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     short shHeadCnt = 0;

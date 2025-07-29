@@ -28,7 +28,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class TestReportprinting : System.Web.UI.Page
+public partial class TestReportprinting :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     Patmstd_Bal_C ObjPBC = new Patmstd_Bal_C();

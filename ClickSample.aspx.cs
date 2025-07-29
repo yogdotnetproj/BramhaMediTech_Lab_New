@@ -34,7 +34,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class ClickSample : System.Web.UI.Page
+public partial class ClickSample :BasePage
 {
     API_DataTransfer_C Obj_Adt = new API_DataTransfer_C();
     string maintestshort = "";

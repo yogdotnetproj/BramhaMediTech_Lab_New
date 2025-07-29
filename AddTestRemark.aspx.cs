@@ -11,7 +11,7 @@ using System.Web.UI.HtmlControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class AddTestRemark : System.Web.UI.Page
+public partial class AddTestRemark :BasePage
 {
     DataTable dt = new DataTable();
     dbconnection dc = new dbconnection();

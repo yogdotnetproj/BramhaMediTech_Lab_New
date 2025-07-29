@@ -11,7 +11,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient; 
 
-public partial class SqlBackup : System.Web.UI.Page
+public partial class SqlBackup :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

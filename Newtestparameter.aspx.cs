@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class Newtestparameter : System.Web.UI.Page
+public partial class Newtestparameter :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     SubTest_Bal_C tst = null;

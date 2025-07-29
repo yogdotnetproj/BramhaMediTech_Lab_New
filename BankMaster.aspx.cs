@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using BAL;
 
-public partial class BankMaster : System.Web.UI.Page
+public partial class BankMaster :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

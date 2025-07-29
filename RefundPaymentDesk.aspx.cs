@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class RefundPaymentDesk : System.Web.UI.Page
+public partial class RefundPaymentDesk :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 
 using System.IO;
 
-public partial class Default4 : System.Web.UI.Page
+public partial class Default4 :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

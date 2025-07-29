@@ -11,7 +11,7 @@ using System.Data;
 using System.Collections;
 using System.Configuration;
 
-public partial class CenterSaleSummary : System.Web.UI.Page
+public partial class CenterSaleSummary :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

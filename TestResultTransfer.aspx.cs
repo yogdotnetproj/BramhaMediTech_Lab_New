@@ -17,7 +17,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Drawing;
 using System.Net.Http;
-public partial class TestResultTransfer : System.Web.UI.Page
+public partial class TestResultTransfer :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     object fromDate = null, toDate = null;

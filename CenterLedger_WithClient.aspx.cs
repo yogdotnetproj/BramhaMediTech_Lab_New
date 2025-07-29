@@ -18,7 +18,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.Odbc;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
-public partial class CenterLedger_WithClient : System.Web.UI.Page
+public partial class CenterLedger_WithClient :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     string  labcode_main = "";

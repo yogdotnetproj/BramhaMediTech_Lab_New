@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class ReportTransfer : System.Web.UI.Page
+public partial class ReportTransfer :BasePage
 {
     string Date1 = DateTime.Now.ToString("ddMMyyyy");
     string Date2 = DateTime.Now.AddDays(-1).ToString("ddMMyyyy");

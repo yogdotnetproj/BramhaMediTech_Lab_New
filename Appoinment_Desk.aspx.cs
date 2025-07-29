@@ -18,7 +18,7 @@ using System.Web.UI.HtmlControls;
 using System.Drawing;
 using System.Net.Http;
 
-public partial class Appoinment_Desk : System.Web.UI.Page
+public partial class Appoinment_Desk :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

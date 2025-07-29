@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using BAL;
 
-public partial class UserManagement_MenuMaster : System.Web.UI.Page
+public partial class UserManagement_MenuMaster :BasePage
 {
     ClsSubMenuMaster objsub = new ClsSubMenuMaster();
     ClsMENUMASTER objmenu = new ClsMENUMASTER();

@@ -17,7 +17,7 @@ using System.Web.Script.Services;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
-public partial class AuthorizeDoctorDailyCount : System.Web.UI.Page
+public partial class AuthorizeDoctorDailyCount :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

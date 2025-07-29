@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Configuration;
 using System.Collections;
-public partial class Testformulashow : System.Web.UI.Page
+public partial class Testformulashow :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

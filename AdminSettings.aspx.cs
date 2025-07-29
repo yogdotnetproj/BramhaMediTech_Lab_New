@@ -10,7 +10,7 @@ using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class AdminSettings : System.Web.UI.Page
+public partial class AdminSettings :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     AdminSettings_C ObjAs = new AdminSettings_C();

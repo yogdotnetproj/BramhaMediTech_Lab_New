@@ -18,7 +18,7 @@ using System.IO;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
-public partial class View_DeltaResult : System.Web.UI.Page
+public partial class View_DeltaResult :BasePage
 {
     string Date1 = DateTime.Now.ToString("ddMMyyyy");
     string selectonFormula = "", regno = "", FID = "";

@@ -21,7 +21,7 @@ using System.Net;
 using System.Web.Management;
 
 
-public partial class AppoinmentBookedPatient : System.Web.UI.Page
+public partial class AppoinmentBookedPatient :BasePage
 {
     int g;
     string Date1 = DateTime.Now.ToString("ddMMyyyy");

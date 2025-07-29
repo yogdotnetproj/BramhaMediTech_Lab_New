@@ -20,7 +20,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Web.Management;
 
-public partial class CallSetUpDetailsNew : System.Web.UI.Page
+public partial class CallSetUpDetailsNew :BasePage
 {
     int g;
     string Date1 = DateTime.Now.ToString("ddMMyyyy");

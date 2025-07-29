@@ -15,7 +15,7 @@ using System.IO;
 using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-public partial class LedgerSummaryReport : System.Web.UI.Page
+public partial class LedgerSummaryReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     string labcode_main = "";

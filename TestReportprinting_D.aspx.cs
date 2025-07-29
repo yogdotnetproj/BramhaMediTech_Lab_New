@@ -17,7 +17,7 @@ using System.Web.Management;
 using System.Data;
 
 
-public partial class TestReportprinting : System.Web.UI.Page
+public partial class TestReportprinting :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

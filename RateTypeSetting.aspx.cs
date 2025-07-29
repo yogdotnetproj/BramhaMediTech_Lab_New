@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Collections;
 using System.Data.SqlClient;
 
-public partial class RateTypeSetting : System.Web.UI.Page
+public partial class RateTypeSetting :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     FindPatient_Bal_C sn = new FindPatient_Bal_C();

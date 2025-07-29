@@ -17,7 +17,7 @@ using System.Web.Management;
 using System.Data;
 
 
-public partial class DirectTestReportPrinting : System.Web.UI.Page
+public partial class DirectTestReportPrinting :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     Patmstd_Bal_C ObjPBC = new Patmstd_Bal_C();

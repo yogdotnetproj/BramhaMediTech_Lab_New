@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class Collectioncenter_Paymentreceive : System.Web.UI.Page
+public partial class Collectioncenter_Paymentreceive :BasePage
 {
     CollCenterPaymentreceive_Bal_C ObjCPB = new CollCenterPaymentreceive_Bal_C();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

@@ -38,7 +38,7 @@ using ZXing.Common;
 using ZXing.Maxicode;
 using ZXing;
 
-public partial class showDemographic : System.Web.UI.Page
+public partial class showDemographic :BasePage
 {
     string maintestshort = "";
     TreeviewBind_C ObjTB = new TreeviewBind_C();

@@ -25,7 +25,7 @@ using System.Drawing;
 
 using System.Web.Services;
 using System.Web.Script.Services;
-public partial class Addresult : System.Web.UI.Page
+public partial class Addresult :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

@@ -8,7 +8,7 @@ using System.Data;
 using System.Configuration;
 using System.Collections;
 
-public partial class ChangePassword : System.Web.UI.Page
+public partial class ChangePassword :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

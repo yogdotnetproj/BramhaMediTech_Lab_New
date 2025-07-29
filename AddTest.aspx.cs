@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class AddTest : System.Web.UI.Page
+public partial class AddTest :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
    

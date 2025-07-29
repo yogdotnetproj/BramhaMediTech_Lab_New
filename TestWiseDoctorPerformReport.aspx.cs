@@ -17,7 +17,7 @@ using System.Web.Script.Services;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
-public partial class TestWiseDoctorPerformReport : System.Web.UI.Page
+public partial class TestWiseDoctorPerformReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

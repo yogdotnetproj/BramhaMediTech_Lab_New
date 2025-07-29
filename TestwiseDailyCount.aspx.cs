@@ -16,7 +16,7 @@ using System.Web.Services;
 using System.Web.Script.Services;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
-public partial class TestwiseDailyCount : System.Web.UI.Page
+public partial class TestwiseDailyCount :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class ReRunResult : System.Web.UI.Page
+public partial class ReRunResult :BasePage
 {
     string MTCode;
     Patmst_New_Bal_C ObjPNBC = new Patmst_New_Bal_C();

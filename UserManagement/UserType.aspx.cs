@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using BAL;
 
-public partial class UserManagement_UserType : System.Web.UI.Page
+public partial class UserManagement_UserType :BasePage
 {
     ClsUserType objusty = new ClsUserType();
     DataSet ds;

@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using BAL;
 
-public partial class UserManagement_FormMaster : System.Web.UI.Page
+public partial class UserManagement_FormMaster :BasePage
 {
     ClsMENUMASTER objmenu = new ClsMENUMASTER();
     DataSet dss;

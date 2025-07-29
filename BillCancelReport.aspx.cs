@@ -19,7 +19,7 @@ using System.Net;
 using System.IO;
 
 
-public partial class BillCancelReport : System.Web.UI.Page
+public partial class BillCancelReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

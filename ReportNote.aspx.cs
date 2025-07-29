@@ -16,7 +16,7 @@ using System.Web.Services;
 using System.Web.Script.Services;
 using System.Data.SqlClient;
 
-public partial class ReportNote : System.Web.UI.Page
+public partial class ReportNote :BasePage
 {
     DataTable dt = new DataTable();
     dbconnection dc = new dbconnection();

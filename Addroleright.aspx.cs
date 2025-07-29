@@ -17,7 +17,7 @@ using System.Net.Mail;
 using System.Web.Management;
 using System.Net;
 using System.IO;
-public partial class Addroleright : System.Web.UI.Page
+public partial class Addroleright :BasePage
 {
     dbconnection dc = new dbconnection();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

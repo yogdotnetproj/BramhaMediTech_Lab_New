@@ -28,7 +28,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class DirectTestReportPrinting_Img : System.Web.UI.Page
+public partial class DirectTestReportPrinting_Img :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

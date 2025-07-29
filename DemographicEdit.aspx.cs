@@ -16,7 +16,7 @@ using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class DemographicEdit : System.Web.UI.Page
+public partial class DemographicEdit : BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     dbconnection dc = new dbconnection();

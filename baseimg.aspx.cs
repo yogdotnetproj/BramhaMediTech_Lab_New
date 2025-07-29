@@ -14,7 +14,7 @@ using System.IO;
 using System.Drawing;
 using System.Data.SqlClient;
 
-public partial class WebCam_baseimg : System.Web.UI.Page
+public partial class WebCam_baseimg :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

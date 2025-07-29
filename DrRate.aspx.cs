@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Collections;
 using System.Data.SqlClient;
 
-public partial class DrRate : System.Web.UI.Page
+public partial class DrRate :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DrMT_sign_Bal_C obj = new DrMT_sign_Bal_C();

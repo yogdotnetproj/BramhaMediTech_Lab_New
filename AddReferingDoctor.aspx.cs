@@ -11,7 +11,7 @@ using System.Data;
 using System.Collections;
 using System.Configuration;
 
-public partial class AddReferingDoctor : System.Web.UI.Page
+public partial class AddReferingDoctor :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();  
     string CenterCode = "";

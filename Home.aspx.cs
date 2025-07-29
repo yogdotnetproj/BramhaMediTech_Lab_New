@@ -24,7 +24,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Configuration;
 
-public partial class Home : System.Web.UI.Page
+public partial class Home :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     GrapReport_C ObjGR = new GrapReport_C();

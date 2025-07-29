@@ -12,7 +12,7 @@ using System.Web.Services;
 using System.Web.Script.Services;
 using System.IO;
 
-public partial class DeleteFutureFormat : System.Web.UI.Page
+public partial class DeleteFutureFormat :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class LabQRCode : System.Web.UI.Page
+public partial class LabQRCode :BasePage
 {
     Expence_Bal_C ObjEB = new Expence_Bal_C();
     DataTable dt = new DataTable();

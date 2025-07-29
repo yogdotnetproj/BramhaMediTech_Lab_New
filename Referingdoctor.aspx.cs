@@ -17,7 +17,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
 
-public partial class Referingdoctor : System.Web.UI.Page
+public partial class Referingdoctor :BasePage
 {
     string Centercode = "", doctornew = "", doctor = "";
     TreeviewBind_C ObjTB = new TreeviewBind_C();

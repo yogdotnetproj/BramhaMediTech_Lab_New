@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class AddFinanceYear : System.Web.UI.Page
+public partial class AddFinanceYear :BasePage
 {
     Expence_Bal_C ObjEBC = new Expence_Bal_C();
     protected void Page_Load(object sender, EventArgs e)

@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 using System.Net.Http;
-public partial class BillCancelation : System.Web.UI.Page
+public partial class BillCancelation :BasePage
 {
     BillReturnViewModel Obj_Adt = new BillReturnViewModel();
     TreeviewBind_C ObjTB = new TreeviewBind_C();  

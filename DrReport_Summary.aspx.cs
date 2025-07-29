@@ -15,7 +15,7 @@ using System.Data.SqlClient;
 using System.Web.Services;
 using System.Web.Script.Services;
 
-public partial class DrReport_Summary : System.Web.UI.Page
+public partial class DrReport_Summary :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

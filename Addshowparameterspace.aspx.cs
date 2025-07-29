@@ -8,7 +8,7 @@ using System.Data;
 
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class Addshowparameterspace : System.Web.UI.Page
+public partial class Addshowparameterspace :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

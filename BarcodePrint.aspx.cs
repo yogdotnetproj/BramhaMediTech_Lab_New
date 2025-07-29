@@ -27,7 +27,7 @@ using System.Drawing;
 using System.Net.Http;
 using System.Net.Mail;
 using System.Web.Management;
-public partial class BarcodePrint : System.Web.UI.Page
+public partial class BarcodePrint :BasePage
 {
     string MTCode;
     Patmst_New_Bal_C ObjPNBC = new Patmst_New_Bal_C();

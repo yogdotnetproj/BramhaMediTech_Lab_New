@@ -18,7 +18,7 @@ using System.Web.UI.HtmlControls;
 using System.Drawing;
 using System.Net.Http;
 
-public partial class EditClickSample : System.Web.UI.Page
+public partial class EditClickSample :BasePage
 {
     API_DataTransfer_C Obj_Adt = new API_DataTransfer_C();
     string maintestshort = "";

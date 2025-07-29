@@ -17,7 +17,7 @@ using CrystalDecisions.Shared;
 using System.IO;
 using System.Diagnostics;
 
-public partial class PatientReport : System.Web.UI.Page
+public partial class PatientReport :BasePage
 {
     int g;
     string Date1 = DateTime.Now.ToString("ddMMyyyy");

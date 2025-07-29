@@ -16,7 +16,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using InfoSoftGlobal;
 
-public partial class Dashboard_Display : System.Web.UI.Page
+public partial class Dashboard_Display :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     AdminSettings_C ObjAs = new AdminSettings_C();

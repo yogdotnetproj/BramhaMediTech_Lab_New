@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class Ratetypemaster : System.Web.UI.Page
+public partial class Ratetypemaster :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     ratetype_Bal_C ramp = new ratetype_Bal_C();

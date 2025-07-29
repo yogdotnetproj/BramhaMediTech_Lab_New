@@ -14,7 +14,7 @@ using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
 
-public partial class Banner_Master : System.Web.UI.Page
+public partial class Banner_Master :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

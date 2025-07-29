@@ -20,7 +20,7 @@ using System.Net;
 using System.IO;
 //using ClosedXML.Excel;
 
-public partial class MOHVoucherReport : System.Web.UI.Page
+public partial class MOHVoucherReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     protected void Page_Load(object sender, EventArgs e)

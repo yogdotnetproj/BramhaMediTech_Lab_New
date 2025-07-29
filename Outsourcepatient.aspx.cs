@@ -12,7 +12,7 @@ using System.Collections;
 using System.Configuration;
 using System.Drawing;
 
-public partial class Outsourcepatient : System.Web.UI.Page
+public partial class Outsourcepatient :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     Patmst_New_Bal_C PNBC = new Patmst_New_Bal_C();

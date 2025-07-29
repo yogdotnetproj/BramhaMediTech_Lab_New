@@ -28,7 +28,7 @@ using System.Drawing.Drawing2D;
 
 using System.Drawing.Imaging;
 
-public partial class PrintDescRep : System.Web.UI.Page
+public partial class PrintDescRep :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

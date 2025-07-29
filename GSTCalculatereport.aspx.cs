@@ -12,7 +12,7 @@ using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
-public partial class GSTCalculatereport : System.Web.UI.Page
+public partial class GSTCalculatereport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     DataTable dt = new DataTable();

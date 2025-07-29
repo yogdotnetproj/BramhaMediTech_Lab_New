@@ -18,7 +18,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Web.Services;
 using System.Web.Script.Services;
-public partial class PrintReportPatientwise : System.Web.UI.Page
+public partial class PrintReportPatientwise :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     object status = null;

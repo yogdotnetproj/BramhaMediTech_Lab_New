@@ -11,7 +11,7 @@ using System.Data;
 using System.Collections;
 using System.Configuration;
 
-public partial class TAT : System.Web.UI.Page
+public partial class TAT :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

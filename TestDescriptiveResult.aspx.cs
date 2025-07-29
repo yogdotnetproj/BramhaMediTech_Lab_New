@@ -29,7 +29,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
 
-public partial class TestDescriptiveResult : System.Web.UI.Page
+public partial class TestDescriptiveResult :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

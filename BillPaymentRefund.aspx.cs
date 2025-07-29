@@ -19,7 +19,7 @@ using System.Net;
 using System.IO;
 using System.Net.Http;
 
-public partial class BillPaymentRefund : System.Web.UI.Page
+public partial class BillPaymentRefund :BasePage
 {
     BillReturnViewModel Obj_Adt = new BillReturnViewModel();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

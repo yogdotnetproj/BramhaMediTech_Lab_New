@@ -25,7 +25,7 @@ using System.Collections.Specialized;
 using System.Text;
 
 
-public partial class BookAppoinment : System.Web.UI.Page
+public partial class BookAppoinment :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
 

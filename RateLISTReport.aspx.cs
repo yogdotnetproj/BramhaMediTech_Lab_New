@@ -15,7 +15,7 @@ using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
 
-public partial class RateLISTReport : System.Web.UI.Page
+public partial class RateLISTReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

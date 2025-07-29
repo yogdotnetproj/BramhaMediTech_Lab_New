@@ -14,7 +14,7 @@ using CrystalDecisions.CrystalReports.Engine;
 
 using CrystalDecisions.Shared;
 
-public partial class CenterwisepaymentReceive : System.Web.UI.Page
+public partial class CenterwisepaymentReceive :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

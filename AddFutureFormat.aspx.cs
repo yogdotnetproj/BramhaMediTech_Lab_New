@@ -25,7 +25,7 @@ using System.Text;
 using System.Threading;
 using System.IO;
 
-public partial class AddFutureFormat : System.Web.UI.Page
+public partial class AddFutureFormat :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

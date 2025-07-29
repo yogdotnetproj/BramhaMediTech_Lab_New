@@ -14,7 +14,7 @@ using CrystalDecisions.CrystalReports.Engine;
 
 using CrystalDecisions.Shared;
 
-public partial class TestParmeterwiseReport : System.Web.UI.Page
+public partial class TestParmeterwiseReport :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

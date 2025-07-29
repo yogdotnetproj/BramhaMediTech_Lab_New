@@ -17,7 +17,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Drawing;
 using System.Net.Http;
-public partial class PanicPatientShow : System.Web.UI.Page
+public partial class PanicPatientShow :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     object fromDate = null, toDate = null;

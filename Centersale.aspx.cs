@@ -16,7 +16,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Centersale : System.Web.UI.Page
+public partial class Centersale :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     string CenterName = "", CenterCode = "", labcode_main = "";

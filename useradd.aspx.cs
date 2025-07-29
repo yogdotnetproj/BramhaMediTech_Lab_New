@@ -22,7 +22,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
 using System.Configuration;
-public partial class useradd : System.Web.UI.Page
+public partial class useradd :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     dbconnection dc = new dbconnection();

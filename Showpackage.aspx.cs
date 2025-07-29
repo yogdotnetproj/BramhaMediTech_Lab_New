@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class Showpackage : System.Web.UI.Page
+public partial class Showpackage :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     dbconnection dc = new dbconnection();

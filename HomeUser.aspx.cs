@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class HomeUser : System.Web.UI.Page
+public partial class HomeUser :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
 

@@ -16,7 +16,7 @@ using System.Web.Script.Services;
 using System.Collections;
 using System.Data.SqlClient;
 
-public partial class TestFormulasetting : System.Web.UI.Page
+public partial class TestFormulasetting :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     Subdepartment_Bal_C hnn = null;

@@ -17,7 +17,7 @@ using System.Net;
 using System.IO;
 using System.Drawing;
 
-public partial class Paybilldesk : System.Web.UI.Page
+public partial class Paybilldesk :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
   

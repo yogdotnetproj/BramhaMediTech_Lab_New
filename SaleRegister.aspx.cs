@@ -19,7 +19,7 @@ using System.Net;
 using System.IO;
 
 
-public partial class SaleRegister : System.Web.UI.Page
+public partial class SaleRegister :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

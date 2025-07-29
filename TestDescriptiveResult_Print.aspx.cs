@@ -26,7 +26,7 @@ using System.Text;
 using System.Threading;
 using System.IO;
 
-public partial class TestDescriptiveResult_Print : System.Web.UI.Page
+public partial class TestDescriptiveResult_Print :BasePage
 {
     DataTable dt = new DataTable();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

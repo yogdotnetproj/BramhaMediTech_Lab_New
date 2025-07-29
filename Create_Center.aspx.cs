@@ -13,7 +13,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class Create_Center : System.Web.UI.Page
+public partial class Create_Center :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     dbconnection dc = new dbconnection();

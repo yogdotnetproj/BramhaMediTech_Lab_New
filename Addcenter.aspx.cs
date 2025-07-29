@@ -10,7 +10,7 @@ using BAL;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class Addcenter : System.Web.UI.Page
+public partial class Addcenter :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();    
     DataTable dt = new DataTable();

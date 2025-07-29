@@ -10,7 +10,7 @@ using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class ShortCut : System.Web.UI.Page
+public partial class ShortCut :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

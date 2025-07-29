@@ -18,7 +18,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class UploadFileView : System.Web.UI.Page
+public partial class UploadFileView :BasePage
 {
     string MTCode;
     Patmst_New_Bal_C ObjPNBC = new Patmst_New_Bal_C();
