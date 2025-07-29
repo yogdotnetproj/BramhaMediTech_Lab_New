@@ -13,7 +13,7 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title runat="server" id="DS" title=" | LIMS ERA INFOSOFT"></title>
+    <title runat="server" id="DS" title=" | LIMS BramhaMediTech"></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- GLOBAL MAINLY STYLES-->
     <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
@@ -315,7 +315,7 @@
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer text-center">
-                <strong>Copyright &copy;2019 <a href="#">Era InfoSoft</a>.</strong> All rights reserved.
+                <strong>Copyright &copy;2019 <a href="#">BramhaMediTech</a>.</strong> All rights reserved.
             </footer>
         </div>
                 </div>

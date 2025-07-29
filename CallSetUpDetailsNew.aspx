@@ -306,7 +306,7 @@
 
                 </section>
                 <footer class="main-footer text-center">
-                <strong>Copyright &copy; 2019 <a href="#"> Era InfoSoft </a>.</strong> All rights reserved.
+                <strong>Copyright &copy; 2019 <a href="#"> BramhaMediTech </a>.</strong> All rights reserved.
             </footer>
     </div>
     <script src="plugins/jquery/jquery.min.js"></script>

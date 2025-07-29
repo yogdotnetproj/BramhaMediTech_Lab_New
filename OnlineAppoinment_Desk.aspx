@@ -547,7 +547,7 @@
             <!-- /.content-wrapper -->
                 
             <footer class="main-footer text-center">
-                <strong>Copyright ©2019 Era InfoSoft.  <a href="#">All rights reserved.</a>.</strong> 
+                <strong>Copyright ©2019 BramhaMediTech.  <a href="#">All rights reserved.</a>.</strong> 
             </footer>
       <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
