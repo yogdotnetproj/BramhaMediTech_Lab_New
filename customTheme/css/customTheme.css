@@ -54106,3 +54106,7 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
 .content-wrapper {
     background: #f8f9fc;
 }
+
+.switchButtonList .form-check label {
+    margin-right: 1.8em;
+}

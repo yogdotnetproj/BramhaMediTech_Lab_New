@@ -170,7 +170,7 @@ class="form-control pull-right" AutoPostBack="false" ></asp:TextBox>
                                 
                                 
                                                    <div class="col-lg-12">
-                                    <div class="form-group form-check">
+                                    <div class="form-group form-check switchButtonList">
                                         
                                         <asp:RadioButtonList ID="ddlStatusAll" runat="server" Visible="false" placeholder="select status" RepeatDirection="Horizontal" 
                                             AutoPostBack="True" OnSelectedIndexChanged="ddlStatusAll_SelectedIndexChanged" >

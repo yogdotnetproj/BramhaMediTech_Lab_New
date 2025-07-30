@@ -212,193 +212,200 @@
             <div class="content-wrapper">
                 <div class="content px-3">
                     <!-- Main content -->
-                    <div class="box p-3 bg-white mb-3">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">
-                                Total number of patients daywise</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body"">
-                            <div class="row">
-                                 <div class="col-md-5">
-                                     </div>
-                                <div class="col-md-3">
-                                     <input type="text" class="form-control"  id="txtCenterName" />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box p-3 bg-white mb-3">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">
+                                        Total number of patients daywise</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <input type="text" class="form-control" id="datepicker11" />
-                                </div>
-                                <div class="col-md-2">
-                                    <input type="text" class="form-control" id="datepicker1" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="chart">
-                                        <div id="chartdiv11" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                <!-- /.box-header -->
+                                <div class="box-body"">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                             <input type="text" class="form-control"  id="txtCenterName" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="datepicker11" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="datepicker1" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="chart">
+                                                <div id="chartdiv11" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box-footer" style="">
-                        </div>
-                    </div>
-                    <div class="box p-3 bg-white mb-3" hidden="hidden">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">
-                                Total number of patients daywise</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body" style="background-color: white;">
-                            <div class="row">
-                                <div class="col-md-9">
-                                </div>
-                                <div class="col-md-2">
-                                    <select name="months" class="months1 form-control" id="months2">
-                                        <option value="1">January</option>
-                                        <option value="2">February</option>
-                                        <option value="3">March</option>
-                                        <option value="4">April</option>
-                                        <option value="5">May</option>
-                                        <option value="6">June</option>
-                                        <option value="7">July</option>
-                                        <option value="8">August</option>
-                                        <option value="9">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-1">
-                                    <input type="text" class="form-control" id="datepicker2" />
+                                <div class="box-footer" style="">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="chart">
-                                        <div id="chartdiv12" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                        </div>
+                        <div class="col-md-4" hidden="hidden">
+                            <div class="box p-3 bg-white mb-3">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">
+                                        Total number of patients daywise</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body" style="background-color: white;">
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4">
+                                            <select name="months" class="months1 form-control" id="months2">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="datepicker2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="chart">
+                                                <div id="chartdiv12" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box-footer" style="">
-                        </div>
-                    </div>
-                    <div class="box p-3 mb-3" style="background-color: white;">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">
-                                Total patients by department</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body" style="background-color: white;">
-                            <div class="row">
-                                <div class="col-md-9">
-                                </div>
-                                <div class="col-md-2">
-                                    <select name="months3" class="months3 form-control" id="months3">
-                                        <option value="1">January</option>
-                                        <option value="2">February</option>
-                                        <option value="3">March</option>
-                                        <option value="4">April</option>
-                                        <option value="5">May</option>
-                                        <option value="6">June</option>
-                                        <option value="7">July</option>
-                                        <option value="8">August</option>
-                                        <option value="9">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-1">
-                                    <input type="text" class="form-control" id="datepicker3" />
+                                <div class="box-footer" style="">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="chart">
-                                        <div id="chartdiv13" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box p-3 mb-3" style="background-color: white;">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">
+                                        Total patients by department</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body" style="background-color: white;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select name="months3" class="months3 form-control" id="months3">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="datepicker3" />
                                         </div>
                                     </div>
-                                    <!-- /.chart-responsive -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="chart">
+                                                <div id="chartdiv13" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                                </div>
+                                            </div>
+                                            <!-- /.chart-responsive -->
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
                                 </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- ./box-body -->
-                        <div class="box-footer" style="">
-                        </div>
-                        <!-- /.box-footer -->
-                    </div>
-                    <div class="box p-3 col-md-12" style="background-color: white;">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">
-                                Top 5 Referal Doctors</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </button>
+                                <!-- ./box-body -->
+                                <div class="box-footer" style="">
+                                </div>
+                                <!-- /.box-footer -->
                             </div>
                         </div>
-                        <!-- /.box-header -->
-                        <div class="box-body" style="background-color: white;">
-                            <div class="row">
-                                <div class="col-md-6">
+                        <div class="col-md-4">
+                            <div class="box p-3 col-md-12" style="background-color: white;">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">
+                                        Top 5 Referal Doctors</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <select name="months" class="months4 form-control" id="months4">
-                                        <option value="1">January</option>
-                                        <option value="2">February</option>
-                                        <option value="3">March</option>
-                                        <option value="4">April</option>
-                                        <option value="5">May</option>
-                                        <option value="6">June</option>
-                                        <option value="7">July</option>
-                                        <option value="8">August</option>
-                                        <option value="9">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text" class="form-control" id="datepicker4" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="chart">
-                                        <div id="chartdiv14" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                <!-- /.box-header -->
+                                <div class="box-body" style="background-color: white;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select name="months" class="months4 form-control" id="months4">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" id="datepicker4" />
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="chart">
+                                                <div id="chartdiv14" style="width: 100%; height: 400px; background-color: #FFFFFF;">
+                                                </div>
+                                            </div>
                                  
-                                </div>
+                                        </div>
                                
-                            </div>
+                                    </div>
                           
-                        </div>
+                                </div>
                        
-                        <div class="box-footer" style="">
-                        </div>
+                                <div class="box-footer" style="">
+                                </div>
                        
+                            </div>
+                        </div>
                     </div>
                     <!-- /.content -->
                 </div>
