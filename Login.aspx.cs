@@ -19,29 +19,12 @@ public partial class Login :BasePage
         
         if (!Page.IsPostBack)
         {
-            //checAuthincation();
+           
         }
 
         txtUName.Focus();
-        if (Convert.ToString( Request.QueryString["Activation"]) == "Yes")
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Input string was not in correct format...');", true);
-        }
-         string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
-         if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("06 /11/ 2025") && Convert.ToDateTime(Currentdate) < Convert.ToDateTime("26 /11/ 2025"))
-         {
-             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Input string was not in correct format....');", true);
-         }
-         //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("28 /04/ 2017") )
-         //{
-         //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Contact to system administrator.');", true);
-             
-         //}
-        //string BCount = Patmst_New_Bal_C.PatientCountBanner(1);
-        //if (Convert.ToInt32(BCount) > 210 && Convert.ToInt32(BCount) < 310)
-        //{
-        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Software will expire few days,please contact to system administrator.');", true);
-        //}
+      
+        
     }
     protected void btnChangepw_Click(object sender, EventArgs e)
     {
@@ -317,23 +300,23 @@ public partial class Login :BasePage
         con.Close();
         con.Dispose();
     }
-    public void PAtValidate()
-    {
-        DataTable dtLDP = new DataTable();
-        dtLDP = ObjTB.Get_TotalPatientVal();
-        if (dtLDP.Rows.Count > 0)
-        {
+    //public void PAtValidate()
+    //{
+    //    DataTable dtLDP = new DataTable();
+    //    dtLDP = ObjTB.Get_TotalPatientVal();
+    //    if (dtLDP.Rows.Count > 0)
+    //    {
 
-        }
-        else
-        {
-            string BCount = Patmst_New_Bal_C.PatientCountBanner(1);
-            if (Convert.ToInt32(BCount) > 1111)
-            {
-               // Server.Transfer("~/Login.aspx", true);
-            }
-        }
-    }
+    //    }
+    //    else
+    //    {
+    //        string BCount = Patmst_New_Bal_C.PatientCountBanner(1);
+    //        if (Convert.ToInt32(BCount) > 1111)
+    //        {
+    //           // Server.Transfer("~/Login.aspx", true);
+    //        }
+    //    }
+    //}
 
     public void UpdateSerialKey(string SerialKey)
     {

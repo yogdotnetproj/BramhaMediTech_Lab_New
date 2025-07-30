@@ -12,7 +12,7 @@
     }
 </style>
 <head id="Head1" runat="server">
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -388,23 +388,23 @@
                                         <div id="chartdiv14" style="width: 100%; height: 400px; background-color: #FFFFFF;">
                                         </div>
                                     </div>
-                                    <!-- /.chart-responsive -->
+                                 
                                 </div>
-                                <!-- /.col -->
+                               
                             </div>
-                            <!-- /.row -->
+                          
                         </div>
-                        <!-- ./box-body -->
+                       
                         <div class="box-footer" style="">
                         </div>
-                        <!-- /.box-footer -->
+                       
                     </div>
                     <!-- /.content -->
                 </div>
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer text-center">
-                <strong>Copyright &copy; 2017 <a href="#">ERA Infotech </a>.</strong> All rights reserved.
+                <strong>Copyright &copy; 2025 <a href="#">BramhaMediTech </a>.</strong> All rights reserved.
             </footer>
         </div>
     </div>
@@ -446,16 +446,9 @@
     <script src="js0/5.js" type="text/javascript"></script>
     <script src="js0/6.js" type="text/javascript"></script>
     <script src="js0/7.js" type="text/javascript"></script>
-     <!--<link href="css1/13.css" rel="stylesheet" type="text/css" />
-      <link href="css1/14.css" rel="stylesheet" type="text/css" />-->
+     
 
-    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"
-        rel="stylesheet" />
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        rel="stylesheet" /> -->
+
     <script type="text/javascript">
             $(document).ready(function () {
 

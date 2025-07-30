@@ -179,7 +179,7 @@ BorderWidth="2px" Height="80px" Width="240px">
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer text-center">
-                <strong>Copyright &copy; 2017 <a href="#">ERA Infotech </a>.</strong> All rights reserved.
+                <strong>Copyright &copy; 2025 <a href="#">BramhaMediTech </a>.</strong> All rights reserved.
             </footer>
         </div>
     </div>
