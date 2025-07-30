@@ -197,6 +197,7 @@
                     <div class="admin-info">
                         <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small>Administrator</small></div>
                 </div-->
+                <ul class="subMenuWrapper nav-2-level" id="subMenuWrapper"></ul>
                 <ul class="side-menu metismenu">
                     <li>
                         <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
@@ -1142,19 +1143,19 @@
              $('body').addClass('darktheme');
              $('body').removeClass('redtheme bluetheme greentheme lighttheme orangetheme darkbluetheme');
          });
-         $('a.darkblue-theme').on('click', function () {
+         $('a.darkblue-theme').on('click', function(e) {
              $('body').addClass('darkbluetheme');
              $('body').removeClass('redtheme bluetheme greentheme lighttheme darktheme orangetheme');
          });
-         $('#notificationMenu').on('click', function () {
+         $('#notificationMenu').on('click', function(e) {
              $('#notificationMenuWrapper').toggleClass('show');
              e.preventDefault();
          });
-         $('#userMenu').on('click', function () {
+         $('#userMenu').on('click', function(e) {
              $('#userMenuWrapper').toggleClass('show');
              e.preventDefault();
          });
-         $('#toggleMenu').on('click', function () {
+         $('#toggleMenu').on('click', function(e) {
              $('#bodyWrapper').toggleClass('collapsed');
              e.preventDefault();
          });

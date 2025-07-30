@@ -67,7 +67,7 @@
      <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
      <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
 </head>
-    <body class="fixed-navbar has-animation bluetheme"> <%--class="hold-transition skin-black sidebar-mini"--%>
+    <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper"> <%--class="hold-transition skin-black sidebar-mini"--%>
         <form runat="server">
             <div class="regular">
                <%-- <ul class="color-theme">
@@ -281,6 +281,7 @@
                     <div class="admin-info">
                         <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text="Username"></asp:Label></div><small></small></div>
                 </div>
+                <ul class="subMenuWrapper nav-2-level" id="subMenuWrapper"></ul>
                 <ul class="side-menu metismenu">
                     <li id="DId" runat="server">
                         <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
@@ -443,6 +444,63 @@
             
         });
 </script>
+        <script language="javascript" type="text/javascript">
+            $(document).ready(function () {
+                $('#notificationMenu').on('click', function (e) {
+                    $('#notificationMenuWrapper').toggleClass('show');
+                    e.preventDefault();
+                });
+                $('#userMenu').on('click', function (e) {
+                    $('#userMenuWrapper').toggleClass('show');
+                    e.preventDefault();
+                });
+                $('#toggleMenu').on('click', function (e) {
+                    $('#bodyWrapper').toggleClass('collapsed');
+                    e.preventDefault();
+                });
+                $(".metismenu > li").on('click', function (e) {
+                    // console.log($('.metismenu li.active ul'));
+                    if ($('.metismenu li.active ul')[0]) {
+                        $('#subMenuWrapper').html($('.metismenu li.active ul')[0].innerHTML);
+                        if (($('.metismenu li.active ul').closest('li.active').offset().top + $('#subMenuWrapper').height()) > $(window).height()) {
+                            $('#subMenuWrapper').css({
+                                top: $('.metismenu li.active ul').closest('li.active').offset().top - 25 - $('#subMenuWrapper').height(),
+                                left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                            });
+                        } else {
+                            $('#subMenuWrapper').css({
+                                top: $('.metismenu li.active ul').closest('li.active').offset().top - 75,
+                                left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                            });
+                        }
+                    } else {
+                        $('#subMenuWrapper').html('');
+                        $('#subMenuWrapper').css({
+                            top: 0,
+                            left: 0
+                        });
+                    }
+                    // e.preventDefault();
+                });
+                $(document).on('click', function (e) {
+                    if (!$(e.target).closest('#subMenuWrapper').length && !$(e.target).closest('.metismenu li.active').length && !$(e.target).closest('.logo-wrapper').length) {
+                        $('#subMenuWrapper').html('');
+                        $('#subMenuWrapper').css({
+                            top: 0,
+                            left: 0
+                        });
+                        $('.metismenu li.active').removeClass('active');
+                    }
+                    if (!$(e.target).closest('#notificationMenu').length) {
+                        $('#notificationMenuWrapper').removeClass('show');
+                    }
+                    if (!$(e.target).closest('#userMenu').length) {
+                        $('#userMenuWrapper').removeClass('show');
+                    }
+                });
+            });
+        </script>
+            
 </body>
 </html>
 

@@ -28,16 +28,12 @@
                             <div class="row mb-3">
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                       
                                         <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">
-                                        <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->  
-                                        <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1">
+                                            <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->  
+                                            <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1"></asp:TextBox>   
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </div> 
-                                      </asp:TextBox>   
-                                       
-                           
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -45,12 +41,12 @@
                                     <div class="form-group">
                                        
                                         <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">
+                                            <!-- <input type="text" class="form-control pull-right" id="todate">-->
+                                            <asp:TextBox id="todate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="2">
+                                            </asp:TextBox>
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                           <!-- <input type="text" class="form-control pull-right" id="todate">-->
-                                            <asp:TextBox id="todate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="2">
-                                            </asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -359,6 +355,7 @@ class="form-control pull-right" AutoPostBack="false" ></asp:TextBox>
                     </div>
                 </section>
                 <!-- /.content -->
+            
       <script language="javascript" type="text/javascript">
           function OpenReport() {
               window.open("Reports.aspx");
@@ -470,4 +467,4 @@ class="form-control pull-right" AutoPostBack="false" ></asp:TextBox>
             </ContentTemplate>
            </asp:UpdatePanel>
 </asp:Content>
-
+            
