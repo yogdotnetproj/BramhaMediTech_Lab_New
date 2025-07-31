@@ -72,7 +72,7 @@
                     width="100%"   HeaderStyle-ForeColor="Black"
   AlternatingRowStyle-BackColor="White"   onrowdatabound="GV_CenterLedger_RowDataBound1" onpageindexchanging="GV_CenterLedger_PageIndexChanging"
                     pagesize="1500" onrowcreated="GV_CenterLedger_RowCreated">
-                    <columns>                    
+                    <columns>
                      <asp:BoundField DataField="CenterCode" HeaderText="Center Name"  />
                      <asp:BoundField DataField="RegDate" HeaderText="Reg Date" />
                      <asp:BoundField DataField="ParticularField" HeaderText="Particular Field" />

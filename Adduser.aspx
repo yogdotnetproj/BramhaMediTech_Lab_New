@@ -67,7 +67,7 @@
 </asp:TemplateField>
   <asp:TemplateField HeaderText="Delete">
                             <ItemTemplate>
-                                <asp:Button ID="btndelete" CommandName="Delete" runat="server"  ForeColor="Blue" Text="Delete" />                            
+                                <asp:Button ID="btndelete" CommandName="Delete" runat="server"  CssClass="btn btn-danger" Text="Delete" />                            
                             </ItemTemplate>                            
                             </asp:TemplateField>
 <asp:TemplateField>

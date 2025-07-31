@@ -261,7 +261,7 @@
 
                                                             <%-- Row2 ------------------- --%>
                                                             <div class="row mb-3">
-                                                                <div class="col-sm-1 p-0 p-l-10">
+                                                                <div class="col-sm-1">
                                                                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                                                         <ContentTemplate>
                                                                             <asp:DropDownList ID="cmbInitial" TabIndex="3" runat="server" CssClass="form-control form-select"

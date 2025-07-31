@@ -859,7 +859,7 @@ public partial class Teststatus :BasePage
 
             HeaderCell.ColumnSpan = 5;
             HeaderGridRow.Cells.Add(HeaderCell);
-            gridreport.Controls[0].Controls.AddAt(0, HeaderGridRow);
+           // gridreport.Controls[0].Controls.AddAt(0, HeaderGridRow);
         }
     }
     protected void ddlStatusAll_SelectedIndexChanged(object sender, EventArgs e)

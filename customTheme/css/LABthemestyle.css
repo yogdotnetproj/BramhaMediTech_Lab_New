@@ -1,0 +1,98 @@
+﻿.datalist-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card-datalist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.card-box {
+    border: 2px solid #a283cb;
+    border-radius: 12px;
+    background-color: #f9f4fd;
+    width: 240px;
+    height: 120px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(162, 131, 203, 0.2);
+}
+
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #3f246a;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.card-seq,
+.card-time {
+    color: #4b2c7a;
+}
+
+.card-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #3c1f66;
+    margin-top: 5px;
+}
+
+.card-code {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #5f3388;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    word-break: break-word;
+}
+
+.labDataListFlex {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input[type=image] {
+    height: 20px;
+}
+
+/*.flashing-icon {
+    width: 14px;
+    height: 14px;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}*/

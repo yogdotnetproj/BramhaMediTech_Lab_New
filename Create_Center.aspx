@@ -69,7 +69,7 @@
                             DataNavigateUrlFormatString="Addcenter.aspx?DoctorCode={0}" />
                             <asp:TemplateField HeaderText="Delete">
                             <ItemTemplate>
-                                <asp:Button ID="btndelete" runat="server" BackColor="gray" Text="Delete" />                            
+                                <asp:Button ID="btndelete" runat="server" CssClass="btn btn-danger" Text="Delete" />                            
                             </ItemTemplate>                            
                             </asp:TemplateField>
                     </Columns>

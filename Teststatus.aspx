@@ -29,11 +29,11 @@
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">
-                                            <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->  
-                                            <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1"></asp:TextBox>   
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
+                                            <!--  <input type="text" class="form-control pull-right" id="fromdate"> -->
+                                            <asp:TextBox id="fromdate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="1"></asp:TextBox>   
                                         </div>
                                     </div>
                                 </div>
@@ -41,12 +41,12 @@
                                     <div class="form-group">
                                        
                                         <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">
-                                            <!-- <input type="text" class="form-control pull-right" id="todate">-->
-                                            <asp:TextBox id="todate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="2">
-                                            </asp:TextBox>
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
+                                            <!-- <input type="text" class="form-control pull-right" id="todate">-->
+                                            <asp:TextBox id="todate" runat="server" data-date-format="dd/mm/yyyy"  class="form-control pull-right"  tabindex="2">
+                                            </asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +270,7 @@ class="form-control pull-right" AutoPostBack="false" ></asp:TextBox>
                               <div class="table-responsive" style="width:100%">
                 <asp:gridview id="gridreport" runat="server" class="table table-responsive table-sm table-bordered" autogeneratecolumns="False" onpageindexchanging="gridreport_PageIndexChanging"
                     onrowdatabound="gridreport_RowDataBound" 
-        HeaderStyle-ForeColor="Black"
+       
     pagesize="4000" skinid="GridSample" AllowPaging="true" width="100%" 
                                       onrowcreated="gridreport_RowCreated">
                     <AlternatingRowStyle BackColor="#95deff"></AlternatingRowStyle>

@@ -161,6 +161,10 @@ input[type="checkbox"] {
         }
     </style>
         <link href="App_Themes/Default/GVCss.css" rel="stylesheet" type="text/css" />
+
+      <link rel="stylesheet" href="customTheme/css/fontawesome-min.css"/>
+     <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
+     <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
     </head>
 <body >
     <form id="form1" runat="server">
@@ -180,7 +184,7 @@ input[type="checkbox"] {
                 <section class="content">
                     <div class="box">
                         <div class="box-body">
-                                     <div class="bg-light mb-3 p-3">
+                                     <div class="bramha-light mb-3 p-3">
                             <div class="row mb-2">
                                 <div class="col-sm-3"><span><strong>Reg # : <asp:Label ID="lblRegNo" runat="server" Text="RegNo"  Font-Bold="True" Width="70px"></asp:Label></strong></span></div>
                                

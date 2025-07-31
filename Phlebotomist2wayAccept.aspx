@@ -311,6 +311,7 @@
           <script src="plugins/Emergency.js"></script>
         <script>
             $(document).ready(function () {
+               
                 var speed = 500;
                 function effectFadeIn(classname) {
                     $("." + classname).fadeOut(speed).fadeIn(speed, effectFadeOut(classname))
@@ -321,13 +322,18 @@
                 //Calling fuction on pageload
                 $(document).ready(function () {
                     effectFadeIn('flashingTextcss');
+                    
+                  
                 });
             });
-  </script>
+        </script>
    <script type="text/javascript">
        if (window.history.forward(1) != null)
            window.history.forward(1);
     </script>
+
+           
+
    </ContentTemplate>
        </asp:UpdatePanel>
     

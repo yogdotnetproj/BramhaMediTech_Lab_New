@@ -66,9 +66,12 @@
      <link rel="stylesheet" href="customTheme/css/fontawesome-min.css"/>
      <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
      <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
+   
 </head>
+   
     <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper"> <%--class="hold-transition skin-black sidebar-mini"--%>
         <form runat="server">
+          
             <div class="regular">
                <%-- <ul class="color-theme">
                        <li><a href="#" class="dark-theme"></a></li>
@@ -500,6 +503,38 @@
                 });
             });
         </script>
+
+          <script type="text/javascript">
+
+              function styleGridButtons() {
+                  console.log("function called");
+                  $("input[type='submit'], input[type='button'], button, a").each(function () {
+                      var text = $.trim($(this).val() || $(this).text()).toLowerCase();
+                      console.log("button tect:" + text);
+                      if (text === "submit") {
+                          $(this).removeAttr("style").addClass("btn btn-primary btn-sm");
+                      } else if (text === "delete") {
+                          $(this).removeAttr("style").addClass("btn btn-danger btn-sm");
+                      } else if (text === "print") {
+                          $(this).removeAttr("style").addClass("btn btn-success btn-sm");
+                      } else if (text === "edit") {
+                          $(this).removeAttr("style").addClass("btn btn-warning btn-sm");
+                      } else if (text === "update") {
+                          $(this).removeAttr("style").addClass("btn btn-success btn-sm");
+                      } else if (text === "cancel") {
+                          $(this).removeAttr("style").addClass("btn btn-secondary btn-sm");
+                      }
+                  });
+              }
+
+
+              // After every UpdatePanel partial postback
+              Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                  styleGridButtons();
+              });
+
+
+          </script>
             
 </body>
 </html>

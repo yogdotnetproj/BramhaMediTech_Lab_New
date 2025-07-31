@@ -189,7 +189,7 @@
                                     </div>
                                         </div>
                             <div class="row mb-3"> 
-                                    
+                                    <div class="col-md-12">
                                     <div class="form-group pl-2 d-flex">
                                         <div class="col">
                                     <div class="form-check form-switch">
@@ -252,7 +252,7 @@
                                     </div>
                                             </div>
                                         </div>
-                                        
+                                        </div>
                                          
                                         
                                            
