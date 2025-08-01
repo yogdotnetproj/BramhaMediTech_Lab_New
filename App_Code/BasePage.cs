@@ -16,8 +16,14 @@ public class BasePage :System.Web.UI.Page
         for (int i = 0; i < controls.Count; i++)
         {
             Control control = controls[i];
-
-
+            if (control is Button)
+            {
+                Button btn = (Button)control;
+                if (btn.Text.ToLower() == "click")
+                {
+                    btn.Text = "Search";
+                }
+            }
 
             if (control is GridView)
             {
@@ -39,6 +45,8 @@ public class BasePage :System.Web.UI.Page
                 TextBox txt = (TextBox)control;
                 txt.BorderColor = System.Drawing.Color.Empty;
                 txt.CssClass = "form-control";
+
+               
             }
             else if (control.HasControls())
             {

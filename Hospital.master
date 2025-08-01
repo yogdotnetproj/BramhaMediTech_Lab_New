@@ -69,7 +69,7 @@
    
 </head>
    
-    <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper"> <%--class="hold-transition skin-black sidebar-mini"--%>
+    <body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper"> <%--class="hold-transition skin-black sidebar-mini"--%>
         <form runat="server">
           
             <div class="regular">
@@ -186,10 +186,10 @@
                  </li>
                  <li class="profile-nav custom-dropdown">
                    <div class="user-wrap">
-                     <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
+                     <div class="user-img"><img src="customTheme/images/DrProfile.jpg" alt="user"></div>
                      <div class="user-content" id="userMenu">
-                       <h6>Ava Davis</h6>
-                       <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+                       <h6>Welcome, <%= Session["username"] %></h6>
+                         <p class="mb-0"><%= Session["usertype"] %><i class="fa-solid fa-chevron-down"></i></p>
                      </div>
                    </div>
                    <div class="custom-menu overflow-hidden" id="userMenuWrapper">
@@ -501,6 +501,12 @@
                         $('#userMenuWrapper').removeClass('show');
                     }
                 });
+            });
+
+            $(document).ready(function () {
+                if (localStorage.getItem('sidebarMenuToggle') && localStorage.getItem('sidebarMenuToggle') != 'true') {
+                    $('#bodyWrapper').toggleClass('collapsed');
+                }
             });
         </script>
 

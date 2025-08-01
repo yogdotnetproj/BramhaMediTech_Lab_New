@@ -32,7 +32,7 @@
     <form id="form1" runat="server">
       <div class="login-card login-dark">
         <div>
-          <h1 class="text-center" style="margin-bottom: 30px;">Laboratory<br>Management System</h1>
+          <h1 class="text-center text-white" style="margin-bottom: 30px;">Laboratory<br>Management System</h1>
           <div class="login-main">
             <form class="p-3" action="dashboard.html" method="post">
                 <div><a class="logo"><img width="170px" class="img-fluid for-light m-auto" src="customTheme/brahmaMedicalDark.png" alt="looginpage"><img width="170px" class="img-fluid for-dark" src="customTheme/brahmaMedicalDark.png" alt="logo"></a></div>

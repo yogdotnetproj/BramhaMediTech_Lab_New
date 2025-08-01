@@ -40956,6 +40956,7 @@ pre {
   margin: 0 auto;
   background: url("../images/login/login_bg.jpg");
   background-position: center;
+  background-size: cover;
   padding: 30px 12px;
 }
 .login-card.login-bg {

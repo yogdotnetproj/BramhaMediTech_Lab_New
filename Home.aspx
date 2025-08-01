@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
     <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
 </head>
-<body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
+<body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
     <form id="form1" runat="server">
     <script src="fusioncharts/FusionCharts.js" type="text/javascript"></script>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -157,10 +157,10 @@
                  </li>
                  <li class="profile-nav custom-dropdown">
                    <div class="user-wrap">
-                     <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
+                     <div class="user-img"><img src="customTheme/images/DrProfile.jpg" alt="user"></div>
                      <div class="user-content" id="userMenu">
-                       <h6>Ava Davis</h6>
-                       <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+                      <h6>Welcome, <%= Session["username"] %></h6>
+                         <p class="mb-0"><%= Session["usertype"] %><i class="fa-solid fa-chevron-down"></i></p>
                      </div>
                    </div>
                    <div class="custom-menu overflow-hidden" id="userMenuWrapper">
@@ -1161,11 +1161,19 @@
          $('#userMenu').on('click', function(e) {
              $('#userMenuWrapper').toggleClass('show');
              e.preventDefault();
+         });      
+
+         $(document).ready(function () {
+             if (localStorage.getItem('sidebarMenuToggle') && localStorage.getItem('sidebarMenuToggle') != 'true') {
+                 $('#bodyWrapper').toggleClass('collapsed');
+             }
          });
-         $('#toggleMenu').on('click', function(e) {
+         $('#toggleMenu').on('click', function () {
+             localStorage.setItem('sidebarMenuToggle', '' + $('#bodyWrapper').hasClass('collapsed'));
              $('#bodyWrapper').toggleClass('collapsed');
              e.preventDefault();
          });
+
          $(".metismenu > li").on('click', function () {
              // console.log($('.metismenu li.active ul'));
              if ($('.metismenu li.active ul')[0]) {
