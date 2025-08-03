@@ -14,23 +14,23 @@ body {
     margin-bottom: 30px; /* Space below the table */
 }
 
-    /* Header styling - Bootstrap's .table-dark handles most of this,
-   but you can add padding or font adjustments here if needed. */
-    .custom-gridview thead th {
-        padding: 15px; /* More padding for header cells */
-        vertical-align: middle;
-        font-weight: bold;
-        color: #fff; /* Ensure text is white for dark header */
-        background-color: #343a40; /* Dark background from .table-dark */
-        border-bottom: 2px solid #495057; /* Slightly darker border at bottom of header */
-    }
+/* Header styling - Bootstrap's .table-dark handles most of this,
+but you can add padding or font adjustments here if needed. */
+.custom-gridview thead th {
+    padding: 15px; /* More padding for header cells */
+    vertical-align: middle;
+    font-weight: bold;
+    color: #fff; /* Ensure text is white for dark header */
+    background-color: #343a40; /* Dark background from .table-dark */
+    border-bottom: 2px solid #495057; /* Slightly darker border at bottom of header */
+}
 
-    /* Body cell styling */
-    .custom-gridview tbody td {
-        padding: 12px 15px; /* Padding for data cells */
-        vertical-align: middle;
-        border-color: #dee2e6; /* Consistent border color for all cells */
-    }
+/* Body cell styling */
+.custom-gridview tbody td {
+    padding: 12px 15px; /* Padding for data cells */
+    vertical-align: middle;
+    border-color: #dee2e6; /* Consistent border color for all cells */
+}
 
 /* Striped rows and hover effects are handled by Bootstrap's .table-striped and .table-hover
    classes applied to the GridView. */
@@ -111,6 +111,10 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    overflow: hidden !important;
+    -webkit-text-fill-color: inherit !important;
+    -webkit-background-clip: inherit;
+    background: #fff;
 }
 .custom-footer-style table td span,
 .custom-footer-style table td span:hover,

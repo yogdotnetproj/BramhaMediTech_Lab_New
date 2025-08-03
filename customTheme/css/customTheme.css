@@ -24,7 +24,7 @@ body {
     display: none !important;
 }
 .side-menu.metismenu {
-    max-height: 100vh;
+    max-height: calc(100vh - 120px);
     overflow: auto;
     padding: 20px 15px;
 }
@@ -53845,6 +53845,8 @@ body .content-wrapper {
 body.collapsed .content-wrapper {
     margin-left: 110px;
     transition-duration: 0.5s;
+    height: calc(100vh - 113px);
+    overflow: auto;
 }
 body .subMenuWrapper {
     display: none;
@@ -54172,4 +54174,48 @@ a:hover::before {
 
 .bramha-light {
     background-color: #a283cb !important;
+}
+
+/**-==================================-*/
+.AutoExtender {
+    padding: 0 !important;
+}
+
+.AutoExtender li {
+    padding: 15px !important;
+    transition-duration: 300ms;
+}
+
+.AutoExtender li * {
+    font-family: "Nata Sans", sans-serif;
+    font-weight: normal !important;
+}
+
+.AutoExtender {
+    font-family: "Nata Sans", sans-serif !important;
+    font-size: .8em;
+    font-weight: normal;
+    border: solid 1px #006699;
+    line-height: 20px;
+    padding: 10px;
+    background-color: White;
+    margin-left: 0px;
+}
+
+.AutoExtenderList {
+    border-bottom: solid 1px rgba(0,0,0,0.3);
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.AutoExtender li:hover {
+    padding-left: 30px !important;
+    transition-duration: 300ms;
+}
+
+.AutoExtenderHighlight {
+    background-color: rgb(162, 131, 203, 0.5);
+    font-size: larger;
+    font-weight: bolder;
 }
