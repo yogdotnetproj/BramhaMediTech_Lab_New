@@ -76,7 +76,7 @@
                         <div class="box-body">
                             <div class="table-responsive" style="width:100%">
               <asp:GridView ID="RateGrid" runat="server" class="table table-responsive table-sm table-bordered" AutoGenerateColumns="False" Width="100%"
-                        OnRowDataBound="RateGrid_RowDataBound" OnPageIndexChanging="RateGrid_PageIndexChanging"
+                        OnRowDataBound="RateGrid_RowDataBound" OnPageIndexChanging="RateGrid_PageIndexChanging"  DataKeyNames="STCODE"
                         PageSize="25"   HeaderStyle-ForeColor="Black"
   AlternatingRowStyle-BackColor="White"    OnRowDeleting="RateGrid_RowDeleting" 
                                     onrowcreated="RateGrid_RowCreated">

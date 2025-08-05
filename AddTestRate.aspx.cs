@@ -109,80 +109,89 @@ public partial class AddTestRate :BasePage
     {
         try
         {
+            string STCODE = "";
             if (Ddlsubdept.SelectedItem != null && ddlRate.SelectedItem != null)
             {
-                for (int i = 0; i < RateGrid.Rows.Count; i++)
+
+
+                foreach (GridViewRow row in RateGrid.Rows)
                 {
-                    string STCODE = RateGrid.Rows[i].Cells[1].Text;
+                    if (row.RowType == DataControlRowType.DataRow)
+                    {
+                        STCODE = RateGrid.DataKeys[row.RowIndex].Value.ToString();
+
+                    }
+                }
+
+                try
+                {
+                    SpeCh_Bal_C sft = new SpeCh_Bal_C(STCODE, ddlRate.SelectedValue, Convert.ToInt32(Session["Branchid"]));
+
+                    sft.STCODE = STCODE;
+                    //  sft.TestName = RateGrid.Rows[i].Cells[2].Text;
+                    sft.DrCode = ddlRate.SelectedValue;
+                    sft.DrName = ddlRate.SelectedItem.Text;
+                    sft.P_username = Convert.ToString(Session["username"]);
+                    int amt = Convert.ToInt32((RateGrid.Rows[0].Cells[3].FindControl("txtamount") as TextBox).Text);
+                    sft.Amount = amt;
+                    sft.Patregdate = Date.getOnlydate();
                     try
                     {
-                        SpeCh_Bal_C SP_BC = new SpeCh_Bal_C(STCODE, ddlRate.SelectedValue, Convert.ToInt32(Session["Branchid"]));
+                        sft.InsertORUpdate(Convert.ToInt32(Session["Branchid"]));
+                        Label4.Text = "Record updated successfully";
 
-                        SP_BC.STCODE = STCODE;
-                        SP_BC.TestName = RateGrid.Rows[i].Cells[2].Text;
-                        SP_BC.DrCode = ddlRate.SelectedValue;
-                        SP_BC.DrName = ddlRate.SelectedItem.Text;
-                        SP_BC.P_username = Convert.ToString(Session["username"]);
-                        int amt = Convert.ToInt32((RateGrid.Rows[i].Cells[3].FindControl("txtamount") as TextBox).Text);
-                        SP_BC.Amount = amt;
-                        SP_BC.Patregdate = Date.getOnlydate();
-                        try
-                        {
-                            SP_BC.InsertORUpdate(Convert.ToInt32(Session["Branchid"]));
-                            Label4.Text = "Record updated successfully";
-
-                        }
-                        catch (Exception exc)
-                        {
-                            if (exc.Message.Equals("Exception aborted."))
-                            {
-                                return;
-                            }
-                            else
-                            {
-                                Response.Cookies["error"].Value = exc.Message;
-                                Server.Transfer("~/ErrorMessage.aspx");
-                            }
-                        }
                     }
-                    catch
+                    catch (Exception exc)
                     {
-                        SpeCh_Bal_C SP_BC = new SpeCh_Bal_C();
-                        SP_BC.STCODE = STCODE;
-                        SP_BC.TestName = RateGrid.Rows[i].Cells[2].Text;
-                        SP_BC.DrCode = ddlRate.SelectedValue;
-                        SP_BC.DrName = ddlRate.SelectedItem.Text;
-                        int amt = Convert.ToInt32((RateGrid.Rows[i].Cells[3].FindControl("txtamount") as TextBox).Text);
-                        SP_BC.Amount = amt;
-                        SP_BC.P_username = Convert.ToString(Session["username"]);
-                        try
+                        if (exc.Message.Equals("Exception aborted."))
                         {
-                            if (amt == 0)
-                            {
-
-                            }
-                            else
-                            {
-                                SP_BC.Insert(Convert.ToInt32(Session["Branchid"]));
-                                Label4.Text = "Record inserted successfully";
-                            }
-
+                            return;
                         }
-
-                        catch (Exception exc)
+                        else
                         {
-                            if (exc.Message.Equals("Exception aborted."))
-                            {
-                                return;
-                            }
-                            else
-                            {
-                                Response.Cookies["error"].Value = exc.Message;
-                                Server.Transfer("~/ErrorMessage.aspx");
-                            }
+                            Response.Cookies["error"].Value = exc.Message;
+                            Server.Transfer("~/ErrorMessage.aspx");
                         }
                     }
                 }
+                catch
+                {
+                    SpeCh_Bal_C sft = new SpeCh_Bal_C();
+                    sft.STCODE = STCODE;
+                    sft.TestName = RateGrid.Rows[0].Cells[2].Text;
+                    sft.DrCode = ddlRate.SelectedValue;
+                    sft.DrName = ddlRate.SelectedItem.Text;
+                    int amt = Convert.ToInt32((RateGrid.Rows[0].Cells[3].FindControl("txtamount") as TextBox).Text);
+                    sft.Amount = amt;
+                    sft.P_username = Convert.ToString(Session["username"]);
+                    try
+                    {
+                        if (amt == 0)
+                        {
+
+                        }
+                        else
+                        {
+                            sft.Insert(Convert.ToInt32(Session["Branchid"]));
+                            Label4.Text = "Record inserted successfully";
+                        }
+
+                    }
+
+                    catch (Exception exc)
+                    {
+                        if (exc.Message.Equals("Exception aborted."))
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            Response.Cookies["error"].Value = exc.Message;
+                            Server.Transfer("~/ErrorMessage.aspx");
+                        }
+                    }
+                }
+
             }
         }
         catch (Exception exc)
