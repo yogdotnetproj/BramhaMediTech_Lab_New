@@ -83,8 +83,8 @@ public partial class MOHVoucherReport :BasePage
                          "  SELECT        ResMst.testname, ResMst.ResultTemplate, patmst.PatRegID, patmst.Patregdate, patmst.Remark, patmst.intial, patmst.Patname, patmst.sex, patmst.Age, patmst.MDY, patmst.CenterName, BranchMaster.BranchName, " +
                           "   HMS_NEW.dbo.LabRegistration.LetterNo, HMS_NEW.dbo.LabRegistration.ClinicalHistory, patmst.DOB, patmst.Pataddress, " +
                           "   patmst.Patphoneno, HMS_NEW.dbo.PatientInsuType.PatientInsuType,HMS_NEW.dbo.Tbl_Race.RaceName " +
-                          "   FROM ResMst INNER JOIN patmst ON ResMst.PID = patmst.PID INNER JOIN "+
-                          "  BranchMaster ON patmst.Branchid = BranchMaster.branchid INNER JOIN "+
+                          "   FROM ResMst INNER JOIN patmst ON ResMst.PID = patmst.PID    "+ " AND  CONVERT(date, patmst.Patregdate)  between('" + Convert.ToDateTime(fromdate.Text).ToString("MM/dd/yyyy") + "') and('" + Convert.ToDateTime(todate.Text).ToString("MM/dd/yyyy") + "')" +
+                          " INNER JOIN BranchMaster ON patmst.Branchid = BranchMaster.branchid INNER JOIN " +
                           "  HMS_NEW.dbo.LabRegistration ON patmst.PPID = HMS_NEW.dbo.LabRegistration.PatRegId INNER JOIN "+
                           "  HMS_NEW.dbo.PatientInsuType ON HMS_NEW.dbo.LabRegistration.PatientSubCategoryId = HMS_NEW.dbo.PatientInsuType.PatientInsuTypeId INNER JOIN "+
                           "  HMS_NEW.dbo.PatientInformation ON HMS_NEW.dbo.LabRegistration.PatRegId = HMS_NEW.dbo.PatientInformation.PatRegId LEFT OUTER JOIN "+
